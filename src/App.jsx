@@ -10,6 +10,7 @@ import cookie4 from './assets/Cookie/biteFour.png';
 import cookie5 from './assets/Cookie/biteFive.png';
 import cookie6 from './assets/Cookie/biteSix.png';
 import cookie7 from './assets/Cookie/biteSeven.png';
+// import cookie8 from './assets/Cookie/biteEight.png';
 
 
 
@@ -36,7 +37,7 @@ function App() {
 
   const cookieClick = () => {
     const newCount = count + 1;
-    if (newCount >= 8) {
+    if (newCount >= 9) {
       setCount(0);
     }
     else {
@@ -59,16 +60,16 @@ function App() {
         Click to have fun.
       </p>
       <div className="cookie">
-        <button onClick={handleCookieClick} className = "cookieButton">
-          {count === 0 (<img src={cookie} alt = "Cookie!" className="cookieImage"/>)}
+        <button onClick={cookieClick} className = "cookieButton">
+          {count === 0 && (<img src={cookie} alt = "Cookie!" className="cookieImage"/>)}
           {count > 0 && count < 8 && (
             <img 
-              src={cookieImages[count - 1]} 
+              src={cookieImages[count]} 
               alt={`Cookie ${count}`} 
               className="cookieImage" 
             />
           )}
-          {count >= 8 && (<span className = "cookieText"> HEY! You ate it all!</span>)}
+          {count === 8 && (<span className = "cookieText"> HEY! You ate it all!</span>)}
         </button>
       </div>
       <div>

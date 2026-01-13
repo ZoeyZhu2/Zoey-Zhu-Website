@@ -58,6 +58,12 @@
   }
 } */
 
+.cookie {
+  display: flex;
+  padding: 2em;
+  justify-content: center;
+  align-items: center;
+}
 .cookieButton {
   font-size: 1em;
   /* this means same as default size in the parent div */
@@ -76,7 +82,7 @@
   border: 0.25em solid #6d4c00;
   border-radius: 1em;
   /* rounds borders */
-  transition: all 0.3 ease;
+  transition: all 0.3s ease;
 }
 
 .cookieButton:hover {
@@ -88,7 +94,7 @@
   width: 5em;
   height: 5em;
   object-fit: contain;
-  animation: cookieAppear 0.3 ease;
+  animation: cookieAppear 0.3s ease;
 }
 
 .cookieText {
