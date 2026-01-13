@@ -58,13 +58,58 @@
   }
 } */
 
-.cookie {
-  padding: 2em;
-}
-.cookie:hover {
-  filter: drop-shadow(0 0 2em #ffb400aa);
+.cookieButton {
+  font-size: 1em;
+  /* this means same as default size in the parent div */
+  padding: 1em;
+  min-width: 8em;
+  min-height: 8em;
+  /* prevents button from ever getting too small */
+  display: flex;
+  align-items: center;
+  /*centers vertically*/
+  justify-content: center;
+  /*centers horiz*/
+  cursor: pointer;
+  /*makes mouse become a hand*/
+  background-color: bisque;
+  border: 0.25em solid #6d4c00;
+  border-radius: 1em;
+  /* rounds borders */
+  transition: all 0.3 ease;
 }
 
-.read-the-docs {
+.cookieButton:hover {
+  filter: drop-shadow(0 0 2em #ffb400aa);
+  transform: scale(1.05);
+}
+
+.cookieImage {
+  width: 5em;
+  height: 5em;
+  object-fit: contain;
+  animation: cookieAppear 0.3 ease;
+}
+
+.cookieText {
+  font-weight: bold;
+  font-size: 1.2em;
+  /* makes font size 1.2x default size */
+}
+
+
+@keyframes cookieAppear {
+/*defining an animation*/
+  from {
+    /*defining starting state */
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.instructions {
   color: #888;
 }
