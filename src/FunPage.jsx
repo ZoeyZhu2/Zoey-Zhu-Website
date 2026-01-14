@@ -47,7 +47,7 @@ function FunPage() {
 
   return (
     <>
-      <div>
+      <div className="smiles">
         <a href="https://theuselessweb.com/" target="_blank">
           <img src={smileyFace} className="smileyFace" alt="Smiley face" />
         </a>

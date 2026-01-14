@@ -1,5 +1,8 @@
+@import "tailwindcss";
+
 .homePage {
     text-align: center;
     display: flex;
     color: black;
+    flex-direction: column;
 }
