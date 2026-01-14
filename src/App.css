@@ -70,6 +70,7 @@
   padding: 1em;
   min-width: 8em;
   min-height: 8em;
+  outline: none;
   /* prevents button from ever getting too small */
   display: flex;
   align-items: center;
@@ -88,6 +89,13 @@
 .cookieButton:hover {
   filter: drop-shadow(0 0 2em #ffb400aa);
   transform: scale(1.05);
+  border-color: #6d4c00 !important;
+}
+
+.cookieButton:focus,
+.cookieButton:focus-visible {
+  outline: none !important;
+  border-color: #6d4c00 !important;
 }
 
 .cookieImage {
