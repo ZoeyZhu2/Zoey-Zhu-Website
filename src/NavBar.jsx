@@ -19,6 +19,9 @@ function NavigationBar() {
                         <li> 
                             <Link to="/fun"> Fun </Link>
                         </li>
+                        <li>
+                            <Link to="/contact"> Contact </Link>
+                        </li>
                     </ol>
                 </div>
             </nav>

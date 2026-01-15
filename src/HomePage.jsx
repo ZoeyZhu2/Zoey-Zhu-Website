@@ -1,27 +1,54 @@
 import { Link } from 'react-router-dom'
 import './HomePage.css'
+import CULTsubdivLeads from './assets/EndeavorsImages/CULTsubdivLeads.jpg'
+import FlappyBirdImage from './assets/ProjectsImages/FlappyBird.png'
+import PanicAtThePigPenImage from './assets/ProjectsImages/PanicAtThePigPen.png'
+import VideoPokerImage from './assets/ProjectsImages/VideoPoker.png'
+import BakingImage from './assets/HobbiesImages/Baking1.heic'
+import CelloImage from './assets/HobbiesImages/CelloImage.JPEG'
+import GolfImage from './assets/HobbiesImages/GolfImage.jpg'
+import KayakingImage from './assets/HobbiesImages/Kayaking.HEIC'
+import RunningImage from './assets/HobbiesImages/RunningImage.jpg'
+import SnowboardImage from './assets/HobbiesImages/Snowboard.HEIC'
+
+
+
+
 
 function HomePage() {
     return (
         <div className = "homePage">
             <section className = "about">
                 <h1> I'm Zoey Zhu </h1>
-                <p> Math-Stats at Columbia</p>
+                <h3> Math-Stats at Columbia</h3>
                 <p> 
                     What's life without the novelty of learning?
                     <br />
-                    Currently captivated by mathematives, statistics, 
-                    computer science.
-                    <br />
-                    Also a lover of classics.
+                    Currently captivated by mathematives, statistics, and 
+                    computer science. Also a lover of classics.
                     <br />
                     semper disco
                 </p>
 
                 <div className="socialButtons">
-                    <button> LinkedIn </button>
-                    <button> GitHub </button>
-                    <button> Email </button>
+                    <button> 
+                        <a href="https://www.linkedin.com/in/zoey-zhu-797207323/">
+                        LinkedIn
+                        {/* use logo too */}
+                        </a> 
+                    </button>
+                    <button> 
+                        <a href="https://github.com/ZoeyZhu2">
+                        GitHub
+                        {/* use logo too */}
+                        </a>
+                    </button>
+                    <button> 
+                        <a href="mailto:zyz2000@columbia.edu">
+                        Email
+                        {/* use logo too */}
+                        </a>
+                    </button>
                 </div>
             </section>
 
@@ -44,13 +71,15 @@ function HomePage() {
                     </p>
                 </div>
                 <div className = "endeavorsImages">
-                    images here
+                    <img src={CULTsubdivLeads} alt="Locomotives Team Subdivision Leads" />
                 </div>
             </section>
 
             <section className="projects">
                 <div className = "projectsImages">
-                    images here
+                    <img src={FlappyBirdImage} alt="Flappy Bird Image" />
+                    <img src={PanicAtThePigPenImage} alt="Panic at the Pig Pen Image" />
+                    <img src={VideoPokerImage} alt="Video Poker Image" />
                 </div>
                 <div>
                     <button type="button">
@@ -160,12 +189,18 @@ function HomePage() {
                     </p>
                     <p className="activityBody">
                         I love having new experiences! I would love to travel the world one day and experience 
-                        many different cultures and see new places. I also enjoy dabbling in cooking, baking, art,
+                        many different cultures and see new places. I also enjoy dabbling in snowboarding, cooking, baking, art,
                          cubing, and puzzles! 
                     </p>
                 </div>
                 <div className = "hobbiesImages">
-                    images here
+                    images carousel here
+                    <img src={BakingImage} alt="Baking Image" />
+                    <img src={CelloImage} alt="Cello Image" />
+                    <img src={GolfImage} alt="Golf Image" />
+                    <img src={KayakingImage} alt="Kayaking Image" />
+                    <img src={RunningImage} alt="Running Image" />
+                    <img src={SnowboardImage} alt="Snowboarding Image" />
                 </div>
             </section>
 

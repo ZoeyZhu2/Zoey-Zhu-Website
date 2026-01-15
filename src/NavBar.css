@@ -12,7 +12,7 @@ nav{
     font-family:'Times New Roman', Times, serif;
     background-color: #3c3a54;
     border-color:azure;
-    color: azure;
+    color: white;
 }
 
 #name{
@@ -39,4 +39,10 @@ nav{
 #navButtons a{
     color: azure;
     text-decoration: none;
+    transition: background 0.2s;
+}
+
+#navButtons a:hover {
+    background-color: #23213a;
+    border-radius: 6px;
 }
