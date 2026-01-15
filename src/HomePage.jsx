@@ -7,7 +7,16 @@ function HomePage() {
             <section className = "about">
                 <h1> I'm Zoey Zhu </h1>
                 <p> Math-Stats at Columbia</p>
-                <p> Hobbies: golf, running, music, game development</p>
+                <p> 
+                    What's life without the novelty of learning?
+                    <br />
+                    Currently captivated by mathematives, statistics, 
+                    computer science.
+                    <br />
+                    Also a lover of classics.
+                    <br />
+                    semper disco
+                </p>
 
                 <div className="socialButtons">
                     <button> LinkedIn </button>

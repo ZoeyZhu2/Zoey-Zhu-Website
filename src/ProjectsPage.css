@@ -1,0 +1,155 @@
+
+.projectsPage {
+  background: linear-gradient(180deg, #0b1324 0%, #0a0f1f 100%);
+  color: #ffffff;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 6rem 8rem;
+}
+
+.sectionHeading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.activityHeading {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+.activitySubheading {
+  font-size: 0.95rem;
+  color: #9aa4bf;
+  margin-bottom: 1rem;
+}
+
+.activityBody {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #d1d5e5;
+  max-width: 600px;
+}
+
+
+/* ---------- HERO / ABOUT ---------- */
+
+.about {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.about h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+.about p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  color: #c7cbe0;
+}
+
+.socialButtons {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 3rem;
+}
+
+.socialButtons button {
+  background: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 0.75rem 1.8rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.socialButtons button:hover {
+  background: #ffffff;
+  color: #0b1324;
+}
+
+
+/* ---------- TWO COLUMN SECTIONS ---------- */
+
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+/* ---------- PROJECTS ---------- */
+
+.projectsImages {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.projects button {
+  margin: 2rem 0;
+  background: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.9rem 1.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.projects button a {
+  text-decoration: none;
+  color: #0b1324;
+  font-weight: 600;
+}
+
+.projectsText {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.projectsImages div{
+  background: #1a2138;
+  border-radius: 16px;
+  aspect-ratio: 4 / 3;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 1024px) {
+  section {
+    padding: 4rem 3rem;
+  }
+
+  .endeavors,
+  .projects,
+  .hobbies {
+    grid-template-columns: 1fr;
+  }
+
+  .projectsImages,
+  .endeavorsImages,
+  .hobbiesImages {
+    grid-template-columns: 1fr;
+  }
+
+  .about h1 {
+    font-size: 3rem;
+  }
+}
+
