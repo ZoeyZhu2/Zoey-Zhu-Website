@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-import './HomePageV.css'
+import './HomePageV2.css'
 import CULTsubdivLeads from './assets/EndeavorsImages/CULTsubdivLeads.jpg'
 import FlappyBirdImage from './assets/ProjectsImages/FlappyBird.png'
 import PanicAtThePigPenImage from './assets/ProjectsImages/PanicAtThePigPen.png'
