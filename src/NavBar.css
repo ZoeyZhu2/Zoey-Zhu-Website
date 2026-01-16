@@ -47,6 +47,11 @@ nav{
 #navButtons a:hover {
     background-color: #23213a;
     border-radius: 6px;
+    height: 100%; /* Make the hover effect cover the entire height of the nav bar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-2px);
 }
 
 #navButtons a.active {
