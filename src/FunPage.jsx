@@ -19,20 +19,38 @@ function FunPage() {
   const [count, setCount] = useState(0);
   const [rickRollRotation, setRotation] = useState(0);
   const [rickRollPosition, setPosition] = useState({top: 100, left: 100});
+  const [bgColor, setBgColor] = useState("#ffffff");
   const cookieImages = [cookie, cookie1, cookie2, cookie3, cookie4, cookie5, cookie6, cookie7];
   
+  const getRandomColor = () => {
+    const char = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += char[Math.floor(Math.random() * 16)]
+    }
+    return color;
+  }
+
+  const bgClick = () => {
+    setBgColor(getRandomColor());
+  }
+
   const randomRotate = () => {
     const deg = Math.floor(Math.random() * 360);
     setRotation(deg);
   };
 
+  /* Adjust randomPosition logic to account for NavBar height */
   const randomPosition = () => {
     const button = rickRollButtonRef.current;
     const buttonWidth = button.offsetWidth;
     const buttonHeight = button.offsetHeight;
-    const newTop = Math.random() * (window.innerHeight - buttonHeight) + 0.5 * buttonHeight;
+    const navBarHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-bar-height')) || 80; // Default to 80px
+
+    const newTop = Math.random() * (window.innerHeight - buttonHeight - navBarHeight) + navBarHeight + 0.5 * buttonHeight;
     const newLeft = Math.random() * (window.innerWidth - buttonWidth) + 0.5 * buttonWidth;
-    setPosition({top: newTop, left: newLeft});
+
+    setPosition({ top: newTop, left: newLeft });
   };
 
   const cookieClick = () => {
@@ -46,7 +64,7 @@ function FunPage() {
   };
 
   return (
-    <>
+    <div onClick={bgClick} style={{backgroundColor: bgColor,  minHeight: '90vh', transition: 'background-color 0.3s ease', top: '10vh'}}>
       <div className="smiles">
         <a href="https://theuselessweb.com/" target="_blank">
           <img src={smileyFace} className="smileyFace" alt="Smiley face" />
@@ -93,7 +111,7 @@ function FunPage() {
           </button>
         </a>
       </div>
-    </>
+    </div>
   )
 }
 

@@ -1,11 +1,14 @@
 #root {
   max-width: none;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
   justify-content: center;
   background-color: #ffffff;
-  margin-top:10%;
+  min-height: 100vh;
+}
+
+.funPageRoot {
+  padding-top: var(--nav-bar-height, 10%); /* Default to 10% if custom property is not set */
 }
 
 .smiles {
@@ -44,6 +47,7 @@
   color: white;
   position: absolute;
   transition: top 0.5s ease, left 0.5s ease, transform 0.2s ease; /* smooth movement */
+  z-index: 1100; /* Higher than the NavBar's z-index */
 }
 
 .rickRollButton:hover {

@@ -1,3 +1,8 @@
+/* Define the CSS variable for NavBar height */
+:root {
+  --nav-bar-height: 80px; /* Adjust this value to match the actual NavBar height */
+}
+
 /* Dark Theme Navigation Bar */
 nav {
   background: rgba(15, 15, 30, 0.95);
@@ -11,6 +16,9 @@ nav {
   top: 0;
   z-index: 1000;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  min-height: var(--nav-bar-height);
+  height: auto;
+  width: 100%;
 }
 
 #name {
