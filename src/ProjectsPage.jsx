@@ -19,7 +19,11 @@ function ProjectsPage(){
                 <p> (This website is one too!)</p>
 
                 <div className="socialButtons">
-                    <button> GitHub </button>
+                    <button> 
+                        <a href="https://github.com/ZoeyZhu2">
+                            Github                       
+                        </a>
+                    </button>
                 </div>
             </section>
 
