@@ -13,6 +13,8 @@ nav{
     background-color: #3c3a54;
     border-color:azure;
     color: white;
+    min-height:10%;
+    height: auto;
 }
 
 #name{
@@ -45,4 +47,9 @@ nav{
 #navButtons a:hover {
     background-color: #23213a;
     border-radius: 6px;
+}
+
+#navButtons a.active {
+    border-bottom: 2px solid azure;
+    padding-bottom: 0.25em;
 }

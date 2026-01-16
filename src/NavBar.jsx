@@ -1,7 +1,13 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import './NavBar.css'
 
 function NavigationBar() {
+    const location = useLocation();
+    
+    const isActive = (path) => {
+        return location.pathname === path;
+    };
+
     return(
         <>
             <nav>
@@ -11,16 +17,16 @@ function NavigationBar() {
                 <div>
                     <ol id = "navButtons">
                         <li> 
-                            <Link to="/"> Home </Link>
+                            <Link to="/" className={isActive('/') ? 'active' : ''}> Home </Link>
                         </li>
                         <li> 
-                            <Link to="/projects"> Projects </Link>
+                            <Link to="/projects" className={isActive('/projects') ? 'active' : ''}> Projects </Link>
                         </li>
                         <li> 
-                            <Link to="/fun"> Fun </Link>
+                            <Link to="/fun" className={isActive('/fun') ? 'active' : ''}> Fun </Link>
                         </li>
                         <li>
-                            <Link to="/contact"> Contact </Link>
+                            <Link to="/contact" className={isActive('/contact') ? 'active' : ''}> Contact </Link>
                         </li>
                     </ol>
                 </div>
