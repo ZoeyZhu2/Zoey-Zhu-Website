@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import smileyFace from './assets/smileyFace.jpg'
 import upsideDownSmileyFace from './assets/upsideDownSmileyFace.jpg'
 import './FunPage.css'
@@ -10,7 +10,7 @@ import cookie4 from './assets/Cookie/biteFour.png';
 import cookie5 from './assets/Cookie/biteFive.png';
 import cookie6 from './assets/Cookie/biteSix.png';
 import cookie7 from './assets/Cookie/biteSeven.png';
-// import cookie8 from './assets/Cookie/biteEight.png';
+import tombstone from './assets/Cookie/Tombstone.png';
 
 
 
@@ -20,6 +20,9 @@ function FunPage() {
   const [rickRollRotation, setRotation] = useState(0);
   const [rickRollPosition, setPosition] = useState({top: 100, left: 100});
   const [bgColor, setBgColor] = useState("#ffffff");
+  const [bgClickCount, setBgClickCount] = useState(0);
+  const [isDisco, setIsDisco] = useState(false);
+  const [showTombstone, setShowTombstone] = useState(false);
   const cookieImages = [cookie, cookie1, cookie2, cookie3, cookie4, cookie5, cookie6, cookie7];
   
   const getRandomColor = () => {
@@ -37,8 +40,32 @@ function FunPage() {
     const isLink = e.target.closest('a');
     if (!isButton && !isLink) {
       setBgColor(getRandomColor());
+      const newCount = bgClickCount + 1;
+      setBgClickCount(newCount);
+      if (newCount >= 15) {
+        setIsDisco(true);
+        setBgClickCount(0);
+      }
     }
-  }
+  } 
+
+  //Disco mode animation
+  useEffect(() => {
+    if (!isDisco) return;
+
+    const interval = setInterval(() => {
+      setBgColor(getRandomColor());}, 100);
+    
+    const timeout = setTimeout(() => {
+      setIsDisco(false);
+    }, 3000);
+    
+    return () => {
+      clearInterval(interval);
+      clearTimeout(timeout);
+    };
+
+  }, [isDisco])
 
   const randomRotate = () => {
     const deg = Math.floor(Math.random() * 360);
@@ -62,11 +89,22 @@ function FunPage() {
     const newCount = count + 1;
     if (newCount >= 9) {
       setCount(0);
+      setShowTombstone(false);
     }
     else {
       setCount(newCount);
     }
   };
+
+  //Showing tombstone after 4 seconds of eating cookie
+  useEffect(() => {
+    if (count === 8) {
+      const timer = setTimeout(() => {
+        setShowTombstone(true);
+    }, 3000);
+    return () => clearTimeout(timer);
+    }
+  }, [count]);
 
   return (
     <div onClick={bgClick} style={{backgroundColor: bgColor,  minHeight: '90vh', transition: 'background-color 0.3s ease', top: '10vh'}}>
@@ -92,7 +130,8 @@ function FunPage() {
               className="cookieImage" 
             />
           )}
-          {count === 8 && (<span className = "cookieText"> HEY! You ate it all!</span>)}
+          {count === 8 && !showTombstone && (<span className = "cookieText"> HEY! You ate it all!</span>)}
+          {showTombstone && (<img src={tombstone} alt = "Tombstone" className="cookieImage"/>)}
         </button>
       </div>
       <div>
