@@ -17,16 +17,16 @@
   align-items: center;
 }
 .smileyFace {
-  height: 8em;
-  padding: 1.5em;
+  height: clamp(5em, 15vw, 12em);
+  padding: clamp(0.8em, 3vw, 2em);
   will-change: filter;
   transition: filter 300ms;
   animation: logo-spin 20s linear infinite;
 }
 
 .upsideDownSmileyFace {
-  height: 8em;
-  padding: 1.5em;
+  height: clamp(5em, 15vw, 12em);
+  padding: clamp(0.8em, 3vw, 2em);
   will-change: filter;
   transition: filter 300ms;
   animation: logo-spin 10s linear infinite;
@@ -40,14 +40,34 @@
   animation: logo-spin 1s linear infinite;
 }
 
+h1 {
+  font-size: clamp(1.8em, 6vw, 3.5em);
+  margin: clamp(0.5em, 2vw, 1.5em) 0;
+}
+
 .rickRollButton {
-  font-size: 1em;
-  padding: 1em;
+  /* font-size: clamp(0.8em, 1.5vw, 1.1em);
+  padding: clamp(0.6em, 1.5vw, 1em);
   background-color: #646cffaa;
   color: white;
   position: absolute;
-  transition: top 0.4s ease, left 0.4s ease, transform 0.2s ease; /* smooth movement */
-  z-index: 1100; /* Higher than the NavBar's z-index */
+  transition: top 0.4s ease, left 0.4s ease, transform 0.2s ease;
+  z-index: 1100; Higher than the NavBar's z-index */
+  font-size: clamp(0.8em, 1.5vw, 1.1em);
+  padding: clamp(0.6em, 1.5vw, 1em);
+  background: linear-gradient(135deg, #646cff 0%, #9c92ff 100%);
+  color: white;
+  position: absolute;
+  transition: top 0.3s ease, left 0.4s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  z-index: 1100;
+  border: none;
+  border-radius: clamp(0.4em, 1vw, 0.8em);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(100, 108, 255, 0.4);
+  text-transform: uppercase;
+
 }
 
 .rickRollButton:hover {
@@ -72,16 +92,15 @@
 
 .cookie {
   display: flex;
-  padding: 2em;
+  padding: clamp(1em, 3vw, 3em);
   justify-content: center;
   align-items: center;
 }
 .cookieButton {
-  font-size: 1em;
-  /* this means same as default size in the parent div */
-  padding: 1em;
-  min-width: 8em;
-  min-height: 8em;
+  font-size: clamp(0.9em, 2vw, 1.3em);
+  padding: clamp(0.8em, 2vw, 1.5em);
+  min-width: clamp(6em, 20vw, 10em);
+  min-height: clamp(6em, 20vw, 10em);
   outline: none;
   /* prevents button from ever getting too small */
   display: flex;
@@ -92,8 +111,8 @@
   cursor: pointer;
   /*makes mouse become a hand*/
   background-color: bisque;
-  border: 0.25em solid #6d4c00;
-  border-radius: 1em;
+  border: clamp(0.15em, 0.5vw, 0.3em) solid #6d4c00;
+  border-radius: clamp(0.6em, 1.5vw, 1.2em);
   /* rounds borders */
   transition: all 0.3s ease;
 }
@@ -111,16 +130,15 @@
 }
 
 .cookieImage {
-  width: 5em;
-  height: 5em;
+  width: clamp(3.5em, 12vw, 6em);
+  height: clamp(3.5em, 12vw, 6em);
   object-fit: contain;
   animation: cookieAppear 0.3s ease;
 }
 
 .cookieText {
   font-weight: bold;
-  font-size: 1.2em;
-  /* makes font size 1.2x default size */
+  font-size: clamp(0.9em, 2.5vw, 1.5em);
 }
 
 
@@ -138,4 +156,7 @@
 
 .instructions {
   color: #888;
+  font-size: clamp(1.2em, 4vw, 2em);
+  margin: clamp(0.5em, 1vw, 1em) 0;
+  font-weight: 500;
 }

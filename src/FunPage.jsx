@@ -118,7 +118,7 @@ function FunPage() {
       </div>
       <h1>The Fun Site</h1>
       <p className="instructions">
-        Click to have fun.
+        Click to have fun!
       </p>
       <div className="cookie">
         <button onClick={cookieClick} className = "cookieButton">
