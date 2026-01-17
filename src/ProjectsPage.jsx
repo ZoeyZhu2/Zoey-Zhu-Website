@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import './ProjectsPage.css'
+import './ProjectsPageV.css'
 import FlappyBirdImage from './assets/ProjectsImages/FlappyBird.png'
 import PanicAtThePigPenImage from './assets/ProjectsImages/PanicAtThePigPen.png'
 import VideoPokerImage from './assets/ProjectsImages/VideoPoker.png'
@@ -28,7 +28,9 @@ function ProjectsPage(){
             </section>
 
             <section className = "FlappyBird">
-                <img src={FlappyBirdImage} alt="Flappy Bird Image" />
+                <div className="imageContainer">
+                    <img src={FlappyBirdImage} alt="Flappy Bird Image" />
+                </div>
                 <h3 className="activityHeading">
                         Flappy Bird+
                 </h3>
@@ -62,7 +64,9 @@ function ProjectsPage(){
             </section>
 
             <section className = "PanicAtThePigPen">
-                <img src={PanicAtThePigPenImage} alt="Panic at the Pig Pen Image" />
+                <div className="imageContainter">
+                    <img src={PanicAtThePigPenImage} alt="Panic at the Pig Pen Image" />
+                </div>
                 <h3 className="activityHeading">
                     Panic at the Pig Pen
                 </h3>
@@ -94,7 +98,9 @@ function ProjectsPage(){
             </section>
 
             <section className = "VideoPoker">
-                <img src={VideoPokerImage} alt="Video Poker Image" />
+                <div className="imageContainer">
+                    <img src={VideoPokerImage} alt="Video Poker Image" />
+                </div>
                 <h3 className="activityHeading">
                     Video Poker
                 </h3>
