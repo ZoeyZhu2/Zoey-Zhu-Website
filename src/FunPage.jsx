@@ -31,8 +31,13 @@ function FunPage() {
     return color;
   }
 
-  const bgClick = () => {
-    setBgColor(getRandomColor());
+  const bgClick = (e) => {
+    // Only change color if NOT clicking on a button or link
+    const isButton = e.target.closest('button');
+    const isLink = e.target.closest('a');
+    if (!isButton && !isLink) {
+      setBgColor(getRandomColor());
+    }
   }
 
   const randomRotate = () => {
