@@ -127,7 +127,7 @@ function HomePage() {
                             and add key-binds for pausing and restarting the game. I built a pause menu
                             with options to resume, return home, open settings, and restart, and a settings music 
                             to adjust volume for background music and my custom sound effects. I have high-score 
-                            tracking and I recently implemented a Firebase backend for player authentication and persistent account data storage. 
+                            tracking, and I recently implemented a Firebase backend for player authentication and persistent account data storage. 
                             My next steps are to add a leaderboard. Eventually, I will add even more features like character and background 
                             selection!
                         </p>
