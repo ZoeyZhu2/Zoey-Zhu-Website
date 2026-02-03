@@ -9,7 +9,7 @@ nav{
     width: 100%;
     z-index: 9999;
     /* z-index is like the "layer" */
-    font-family:'Times New Roman', Times, serif;
+    /* font-family:'Times New Roman', Times, serif; */
     background-color: #3c3a54;
     border-color:azure;
     color: white;
