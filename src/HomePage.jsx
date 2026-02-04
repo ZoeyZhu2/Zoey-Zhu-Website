@@ -132,7 +132,7 @@ function HomePage() {
                             selection!
                         </p>
                         <button type="button" className="projectButton">
-                            <a href="https://play.unity.com/en/games/4f9dbad4-cd66-4d68-ba56-ad9332567443/flappy-bird-web-v22">
+                            <a href="https://play.unity.com/en/games/c572a23f-aec7-48ba-aaf3-4ee5ef875f73/flappy-bird-web-v32">
                             Play Flappy Bird+ here!
                             </a>
                         </button>
