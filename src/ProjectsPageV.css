@@ -66,7 +66,7 @@
 /* Project Sections */
 .FlappyBird,
 .PanicAtThePigPen,
-.VideoPoker {
+.VideoPoker, .TreeGame {
   background: rgba(30, 30, 46, 0.6);
   backdrop-filter: blur(10px);
   border-radius: 20px;
@@ -80,7 +80,7 @@
 
 .FlappyBird:hover,
 .PanicAtThePigPen:hover,
-.VideoPoker:hover {
+.VideoPoker:hover, .TreeGame:hover {
   transform: translateY(-5px);
   border-color: rgba(102, 126, 234, 0.4);
   box-shadow: 0 12px 40px rgba(102, 126, 234, 0.2);
@@ -99,7 +99,8 @@
 /* Project Images */
 .FlappyBird img,
 .PanicAtThePigPen img,
-.VideoPoker img {
+.VideoPoker img, 
+.TreeGame img {
   max-width: 100%;
   max-height: 100%;
   height: auto;
@@ -112,7 +113,8 @@
 
 .FlappyBird img:hover,
 .PanicAtThePigPen img:hover,
-.VideoPoker img:hover {
+.VideoPoker img:hover, 
+.TreeGame img:hover {
   transform: scale(1.02);
 }
 
@@ -208,7 +210,8 @@
   
   .FlappyBird,
   .PanicAtThePigPen,
-  .VideoPoker {
+  .VideoPoker, 
+  .TreeGame {
     padding: 30px 20px;
   }
   

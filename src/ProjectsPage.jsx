@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 import './ProjectsPageV.css'
+import TreeGameImage from './assets/ProjectsImages/BinaryTreeTraversalGame1.png';
 import FlappyBirdImage from './assets/ProjectsImages/FlappyBird.png'
 import PanicAtThePigPenImage from './assets/ProjectsImages/PanicAtThePigPen.png'
 import VideoPokerImage from './assets/ProjectsImages/VideoPoker.png'
-import BakingImage from './assets/HobbiesImages/BakingImage.jpg'
 import { useEffect } from 'react';
 
 
@@ -26,6 +26,45 @@ function ProjectsPage(){
                     </button>
                 </div>
             </section>
+
+            <section className = "TreeGame">
+                <div className="imageContainer">
+                    <img src={TreeGameImage} alt="Binary Tree Traversal Game Image" />
+                </div>
+                <h3 className="activityHeading">
+                    Binary Tree Traversal Game
+                </h3>
+                <p className="activitySubheading">
+                    Java, Javafx, Git
+                </p>
+                <p className="activityBody">
+                    The Binary Tree Traversal Game is the second game I developed with Java. 
+                    I built this game as a way for students to practice tree traversals. The
+                    first game mode provides users with a randomly generated binary search tree
+                    and has the user click the nodes in order of the traversal mode they selected 
+                    (preorder, inorder, or postorder). The nodes highlight green or red to give 
+                    real-time feedback. In the second game mode, users are given two traversals 
+                    of random binary trees. They can select either preorder + inorder or 
+                    postorder + inorder, and they are tasked with reconstructing a tree using 
+                    a drag-and-drop canvas. Users can check their accuracy while in progress and
+                    clear the canvas if necessary. My next steps are to improve the UI, and 
+                    eventually I hope to expand this platform to encompass other games for 
+                    practicing data structures knowledge!
+                </p>
+                <div className="Tree Game Buttons">
+                    <button type="button">
+                        <a href="https://binary-tree-traversal-game.onrender.com/">
+                        Play Binary Tree Traversal Game here!
+                        </a>
+                    </button>
+                    <button type="button">
+                        <a href="https://github.com/ZoeyZhu2/Binary-Tree-Traversal-Game">
+                        Binary Tree Traversal Game on Github
+                        </a>
+                    </button>
+                </div> 
+            </section>
+
 
             <section className = "FlappyBird">
                 <div className="imageContainer">

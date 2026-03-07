@@ -114,6 +114,31 @@ function HomePage() {
                 <div className="projectsGrid">
                     <Link to="/projects" className="projectCard">
                         <h3 className="activityHeading">
+                            Binary Tree Traversal Game
+                        </h3>
+                        <p className="activitySubheading">
+                            Java, Javafx, Git
+                        </p>
+                        <p className="activityBody">
+                            The Binary Tree Traversal Game is the second game I developed with Java. 
+                            I built this game as a way for students to practice tree traversals. The
+                            first game mode provides users with a randomly generated binary search tree
+                            and has the user click the nodes in order of the traversal mode they selected 
+                            (preorder, inorder, or postorder). The nodes highlight green or red to give 
+                            real-time feedback. In the second game mode, users are given two traversals 
+                            of random binary trees. They can select either preorder + inorder or 
+                            postorder + inorder, and they are tasked with reconstructing a tree using 
+                            a drag-and-drop canvas. Users can check their accuracy while in progress and
+                            clear the canvas if necessary. My next steps are to improve the UI, and 
+                            eventually I hope to expand this platform to encompass other games for 
+                            practicing data structures knowledge!
+                        </p>
+                        <button type="button" className="projectButton" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open('https://binary-tree-traversal-game.onrender.com', '_blank'); }}>
+                            Play the Binary Tree Traversal Game here!
+                        </button>
+                    </Link>
+                    <Link to="/projects" className="projectCard">
+                        <h3 className="activityHeading">
                             Flappy Bird+
                         </h3>
                         <p className="activitySubheading">
@@ -128,13 +153,11 @@ function HomePage() {
                             with options to resume, return home, open settings, and restart, and a settings music 
                             to adjust volume for background music and my custom sound effects. I have high-score 
                             tracking, and I recently implemented a Firebase backend for player authentication and persistent account data storage. 
-                            My next steps are to add a leaderboard. Eventually, I will add even more features like character and background 
+                            I have added a leaderboard with score rankings for the normal and daily game modes. Eventually, I will add even more features like character and background 
                             selection!
                         </p>
-                        <button type="button" className="projectButton">
-                            <a href="https://play.unity.com/en/games/c572a23f-aec7-48ba-aaf3-4ee5ef875f73/flappy-bird-web-v32">
+                        <button type="button" className="projectButton" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open('https://play.unity.com/en/games/c572a23f-aec7-48ba-aaf3-4ee5ef875f73/flappy-bird-web-v32', '_blank'); }}>
                             Play Flappy Bird+ here!
-                            </a>
                         </button>
                     </Link>
 
