@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom'
 import './ProjectsPageV.css'
 import TreeGameImage from './assets/ProjectsImages/BinaryTreeTraversalGame1.png';
-import FlappyBirdImage from './assets/ProjectsImages/FlappyBird.png'
-import PanicAtThePigPenImage from './assets/ProjectsImages/PanicAtThePigPen.png'
-import VideoPokerImage from './assets/ProjectsImages/VideoPoker.png'
+import FlappyBirdImage from './assets/ProjectsImages/FlappyBird.png';
+import PanicAtThePigPenImage from './assets/ProjectsImages/PanicAtThePigPen.png';
+import VideoPokerImage from './assets/ProjectsImages/VideoPoker.png';
+import LocomotivesWebsiteImage from './assets/ProjectsImages/CulocomotivesWebsite2.png';
+
 import { useEffect } from 'react';
 
 
@@ -65,6 +67,37 @@ function ProjectsPage(){
                 </div> 
             </section>
 
+            <section className = "LocomotivesWebsite">
+                <div className="imageContainer">
+                    <img src={LocomotivesWebsiteImage} alt="Columbia Locomotives Website" />
+                </div>
+                <h3 className="activityHeading">
+                    Columbia Locomotives Team Website
+                </h3>
+                <p className="activitySubheading">
+                    Figma, Vercel, Git
+                </p>
+                <p className="activityBody">
+                    I made a website for the Columbia Locomotives team, 
+                    curating a custom color palette and using Figma to React to 
+                    turn my vision into a product. There are six pages: Home, 
+                    About Us, Competition, Progress, Sponsor Us, Join Us, and Contact.
+                </p>
+                <div className="Locomotives Website Buttons">
+                    <button type="button">
+                        <a href="https://culocomotives.vercel.app/">
+                        Visit the Columbia Locomotives website here!
+                        </a>
+                    </button>
+                    <button type="button">
+                        <a href="https://github.com/ZoeyZhu2/culocomotives">
+                        Columbia Locomotives Team Website on Github
+                        </a>
+                    </button>
+                </div> 
+            </section>
+
+
 
             <section className = "FlappyBird">
                 <div className="imageContainer">
@@ -85,7 +118,7 @@ function ProjectsPage(){
                     with options to resume, return home, open settings, and restart, and a settings music 
                     to adjust volume for background music and my custom sound effects. I have high-score 
                     tracking, and I recently implemented a Firebase backend for player authentication and persistent account data storage. 
-                    My next steps are to add a leaderboard. Eventually, I will add even more features like character and background 
+                    I have added a leaderboard with score rankings for the normal and daily game modes. Eventually, I will add even more features like character and background 
                     selection!
                 </p>
                 <div className="Flappy Bird Buttons">

@@ -66,7 +66,8 @@
 /* Project Sections */
 .FlappyBird,
 .PanicAtThePigPen,
-.VideoPoker, .TreeGame {
+.VideoPoker, .TreeGame,
+.LocomotivesWebsite {
   background: rgba(30, 30, 46, 0.6);
   backdrop-filter: blur(10px);
   border-radius: 20px;
@@ -80,7 +81,8 @@
 
 .FlappyBird:hover,
 .PanicAtThePigPen:hover,
-.VideoPoker:hover, .TreeGame:hover {
+.VideoPoker:hover, .TreeGame:hover,
+LocomotivesWebsite:hover {
   transform: translateY(-5px);
   border-color: rgba(102, 126, 234, 0.4);
   box-shadow: 0 12px 40px rgba(102, 126, 234, 0.2);
@@ -100,7 +102,8 @@
 .FlappyBird img,
 .PanicAtThePigPen img,
 .VideoPoker img, 
-.TreeGame img {
+.TreeGame img,
+.LocomotivesWebsite img {
   max-width: 100%;
   max-height: 100%;
   height: auto;
@@ -114,7 +117,8 @@
 .FlappyBird img:hover,
 .PanicAtThePigPen img:hover,
 .VideoPoker img:hover, 
-.TreeGame img:hover {
+.TreeGame img:hover,
+.LocomotivesWebsite img:hover {
   transform: scale(1.02);
 }
 
@@ -211,7 +215,8 @@
   .FlappyBird,
   .PanicAtThePigPen,
   .VideoPoker, 
-  .TreeGame {
+  .TreeGame,
+  .LocomotivesWebsite {
     padding: 30px 20px;
   }
   
