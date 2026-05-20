@@ -57,7 +57,7 @@ function HomePage() {
             {/*the following seciton should be centered*/}
             <section className = "about">
                 <h1> I'm Zoey Zhu </h1>
-                <h3> Math-Stats at Columbia</h3>
+                <h3> CS-Math at Columbia</h3>
                 <p> 
                     What's life without the novelty of learning?
                     Currently captivated by mathematives, statistics, and 
