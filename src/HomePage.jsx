@@ -88,6 +88,22 @@ function HomePage() {
                         Current Endeavors
                     </h2>
                     <h3 className="activityHeading">
+                        Research Assistant
+                    </h3>
+                    <p className="activitySubheading">
+                        Columbia Astronomy Department
+                    </p>
+                    <p className="activityBody">
+                        I am working with Professor Frits Paerels on identifying x-ray counterparts to gravitational wave events.
+                        I use Python to process hundreds of gravitational wave transient event FITS files, compute x-ray scattering and absorption optical depths, and determine
+                         candidate search locations. I am gaining experience working with NumPy, Matplotlib, healpy, and astropy libraries.
+                    </p>
+                </div>
+            </section>
+            <section className = "endeavors">
+             {/* the following section should be on the left side */}
+                <div className="endeavorsText">
+                    <h3 className="activityHeading">
                         Treasurer
                     </h3>
                     <p className="activitySubheading">
@@ -106,20 +122,46 @@ function HomePage() {
                 </div>
             </section>
 
-            {/* the following section should be on one line horizontally*/}
+            <section className = "endeavors">
+             {/* the following section should be on the left side */}
+                <div className="endeavorsText">
+                    <h2 className="sectionHeading"> 
+                        Upcoming Endeavors
+                    </h2>
+                    <h3 className="activityHeading">
+                        Treasurer
+                    </h3>
+                    <p className="activitySubheading">
+                        Columbia University Road Runners
+                    </p>
+                    <p className="activityBody">
+                        I will be responsible forfinancial tracking, completing budget requests, and coordinating race registration for the club. I will also be assisting in organizing club events and lead weekly runs. 
+                    </p>
+                    <h3 className="activityHeading">
+                        Treasurer
+                    </h3>
+                    <p className="activitySubheading">
+                        Columbia Undergraduate Math Society
+                    </p>
+                    <p className="activityBody">
+                        I will be responsible for budgeting, food catering, and other similar tasks for our weekly math talks. 
+                    </p>
+                </div>                
+            </section>
+
             <section className="projects">
                 <h2 className="sectionHeading"> 
                     Current Projects
                 </h2>
                 <div className="projectsGrid">
-                    <Link to="/projects" className="projectCard">
+                    {/* <Link to="/projects" className="projectCard">
                         <h3 className="activityHeading">
                             Binary Tree Traversal Game
                         </h3>
                         <p className="activitySubheading">
                             Java, Javafx, Git
-                        </p>
-                        <p className="activityBody">
+                        </p> */}
+                        {/* <p className="activityBody">
                             The Binary Tree Traversal Game is the second game I developed with Java. 
                             I built this game as a way for students to practice tree traversals. The
                             first game mode provides users with a randomly generated binary search tree
@@ -135,6 +177,25 @@ function HomePage() {
                         </p>
                         <button type="button" className="projectButton" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open('https://binary-tree-traversal-game.onrender.com', '_blank'); }}>
                             Play the Binary Tree Traversal Game here!
+                        </button>
+                    </Link> */}
+                    <Link to="/projects" className="projectCard">
+                        <h3 className="activityHeading">
+                            Zodoku
+                        </h3>
+                        <p className="activitySubheading">
+                            Python, Flask, Javascript, HTML, CSS, Git
+                        </p>
+                        <p className="activityBody">
+                            I created a Sudoku solver and puzzle generator to help users learn Sudoku solving strategies and practice using them.
+                             Input any puzzle into the solver function and it will tell you if it is solvable and solve it if it is.
+                              Walk through step by step and see the cells be solved one by one with the current strategy being used.
+                               Practice what you learn with the puzzle generator at 4 difficulty levels.
+                                If you get stuck, click for hints! The first hint will show which cell to look at,
+                                 the second hint will suggest a strategy, and the third hint will solve that cell.
+                        </p>
+                        <button type="button" className="projectButton" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open('https://sudoku-solver-r7bw.onrender.com/', '_blank'); }}>
+                            Use Zodoku here!
                         </button>
                     </Link>
                     <Link to="/projects" className="projectCard">
@@ -161,7 +222,7 @@ function HomePage() {
                         </button>
                     </Link>
 
-                    <Link to="/projects" className="projectCard">
+                    {/* <Link to="/projects" className="projectCard">
                         <h3 className="activityHeading">
                             Panic at the Pig Pen
                         </h3>
@@ -178,9 +239,9 @@ function HomePage() {
                             to adjust volume. My next steps are to integrate a backend database to store player data 
                             across sessions and deploy!
                         </p>
-                    </Link>
+                    </Link> */}
 
-                    <Link to="/projects" className="projectCard">
+                    {/* <Link to="/projects" className="projectCard">
                         <h3 className="activityHeading">
                             Video Poker
                         </h3>
@@ -195,9 +256,14 @@ function HomePage() {
                             custom card faces to enhance user experience! My next steps are to continue 
                             improving the GUI and officially publish the game!
                         </p>
+                    </Link> */}
+                </div>
+                <div className="viewAllProjectsButtonWrapper">
+                    <Link to="/projects" className="viewAllProjectsButton">
+                        See All Projects →
                     </Link>
                 </div>
-            </section>
+        </section>
 
             {/* the following section should be on one line horizontally*/}
             <section className = "hobbies">

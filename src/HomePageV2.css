@@ -122,16 +122,21 @@
 /* Endeavors Section */
 .endeavors {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 60px;
   align-items: center;
   max-width: 1200px;
-  margin: 0 auto 100px;
+  margin: 0 auto 0;
   padding: 40px;
   background: rgba(30, 30, 46, 0.6);
   backdrop-filter: blur(10px);
   border-radius: 20px;
   border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.endeavors:has(.endeavorsImages) {
+  grid-template-columns: 1fr 1fr;  /* two columns only when image exists */
+  margin-bottom: 30px; 
 }
 
 .endeavorsText {
@@ -300,6 +305,47 @@
   color: white;
 }
 
+.viewAllProjectsButtonWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.viewAllProjectsButton {
+  display: inline-block;
+  padding: 14px 35px;
+  border: 2px solid #667eea;
+  border-radius: 50px;
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.viewAllProjectsButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.viewAllProjectsButton:hover::before {
+  left: 0;
+}
+
+.viewAllProjectsButton:hover {
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
 /* Hobbies Section */
 .hobbies {
   display: grid;
@@ -467,6 +513,7 @@
   .hobbies,
   .projects {
     padding: 30px 20px;
+    margin: 0 auto 30px;  /* was 100px */
   }
 }
 

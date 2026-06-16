@@ -5,7 +5,7 @@ import FlappyBirdImage from './assets/ProjectsImages/FlappyBird.png';
 import PanicAtThePigPenImage from './assets/ProjectsImages/PanicAtThePigPen.png';
 import VideoPokerImage from './assets/ProjectsImages/VideoPoker.png';
 import LocomotivesWebsiteImage from './assets/ProjectsImages/CulocomotivesWebsite2.png';
-
+import ZodokuImage from './assets/ProjectsImages/ZodokuImage.png';
 import { useEffect } from 'react';
 
 
@@ -27,6 +27,38 @@ function ProjectsPage(){
                         </a>
                     </button>
                 </div>
+            </section>
+
+            <section className = "Zodoku">
+                <div className="imageContainer">
+                    <img src={ZodokuImage} alt="Binary Tree Traversal Game Image" />
+                </div>
+                <h3 className="activityHeading">
+                    Zodoku
+                </h3>
+                <p className="activitySubheading">
+                    Python, Flask, Javascript, HTML, CSS, Git
+                </p>
+                <p className="activityBody">
+                    I created a Sudoku solver and puzzle generator to help users learn Sudoku solving strategies and practice using them.
+                             Input any puzzle into the solver function and it will tell you if it is solvable and solve it if it is.
+                              Walk through step by step and see the cells be solved one by one with the current strategy being used.
+                               Practice what you learn with the puzzle generator at 4 difficulty levels.
+                                If you get stuck, click for hints! The first hint will show which cell to look at,
+                                 the second hint will suggest a strategy, and the third hint will solve that cell.
+                </p>
+                <div className="Tree Game Buttons">
+                    <button type="button">
+                        <a href="https://sudoku-solver-r7bw.onrender.com/">
+                        Use Zodoku here!
+                        </a>
+                    </button>
+                    <button type="button">
+                        <a href="https://github.com/ZoeyZhu2/Binary-Tree-Traversal-Game">
+                        Binary Tree Traversal Game on Github
+                        </a>
+                    </button>
+                </div> 
             </section>
 
             <section className = "TreeGame">
@@ -136,7 +168,7 @@ function ProjectsPage(){
             </section>
 
             <section className = "PanicAtThePigPen">
-                <div className="imageContainter">
+                <div className="imageContainer">
                     <img src={PanicAtThePigPenImage} alt="Panic at the Pig Pen Image" />
                 </div>
                 <h3 className="activityHeading">
