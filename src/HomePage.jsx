@@ -129,6 +129,16 @@ function HomePage() {
                         Upcoming Endeavors
                     </h2>
                     <h3 className="activityHeading">
+                        Teaching Assistant
+                    </h3>
+                    <p className="activitySubheading">
+                        Columbia Statistics Department
+                    </p>
+                    <p className="activityBody">
+                        I will be a teaching assistant for STAT1201UN Calc-based Intro 
+                        to Statistics taught by Professor Cynthia Rush. 
+                    </p>
+                    <h3 className="activityHeading">
                         Treasurer
                     </h3>
                     <p className="activitySubheading">
@@ -154,6 +164,51 @@ function HomePage() {
                     Current Projects
                 </h2>
                 <div className="projectsGrid">
+                    <Link to="/projects" className="projectCard">
+                        <h3 className="activityHeading">
+                            Poker Calculator
+                        </h3>
+                        <p className="activitySubheading">
+                            Python, Git
+                        </p>
+                        <p className="activityBody">
+                            I created a poker calculator that estimates player equity and ev
+                    using monte-carlo simulations in different scenarios
+                    including number of players (2-9), active hands, betting rounds (preflop through river), and table positions.
+                    This can be used during live games by inputting game information as action progresses.
+                    I am currently designing another mode where users can play against
+                    bot opponents with configurable parameters such as assertiveness, looseness, and variability.
+                     My next steps are to transition from a command-line interface to an interactive web interface.
+                        </p>
+                        <button type="button" className="projectButton" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open('https://github.com/ZoeyZhu2/poker-calculator', '_blank'); }}>
+                            See the code here!
+                        </button>
+                    </Link>
+                    <Link to="/projects" className="projectCard">
+                        <h3 className="activityHeading">
+                            LionSwipe
+                        </h3>
+                        <p className="activitySubheading">
+                            JavaScript, HTML, CSS, Git
+                        </p>
+                        <p className="activityBody">
+                            LionSwipe is an all-in-one platform for meal swipe tracking and budgeting. 
+                            It displays live on-campus dining hall menus and students can record 
+                            meals eaten at a dining hall by clicking on it. Students can also log outside meals.
+                            With this data, LionSwipe generates a comprehensive dashboard that displays past, present, and target weekly meal swipe usage and spending amounts. The charts provide clarity on a student’s dining habits and how they should allocate their swipes and spending money going forward—with the goal of minimizing waste. 
+                            We have currently released a beta version to the public. In the future, 
+                            we will release more functionality, such as a chatbot search feature that
+                            provides places to eat off-campus that are customized to user preferences, 
+                            including diet, distance, and budget, and a swipe market that connects students 
+                            who want to buy and sell swipes, reducing the financial impact of wasted swipes.
+                            In the process of developing LionSwipe, I personally conducted 30 customer
+                            discovery interviews. I created this in collaboration with{' '}
+                            <a href="mailto:evelyn.ding@columbia.edu">Evelyn Ding</a>.
+                        </p>
+                        <button type="button" className="projectButton" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open('https://www.lionswipe.com/', '_blank'); }}>
+                            Use LionSwipe here!
+                        </button>
+                    </Link>
                     {/* <Link to="/projects" className="projectCard">
                         <h3 className="activityHeading">
                             Binary Tree Traversal Game
@@ -179,7 +234,7 @@ function HomePage() {
                             Play the Binary Tree Traversal Game here!
                         </button>
                     </Link> */}
-                    <Link to="/projects" className="projectCard">
+                    {/* <Link to="/projects" className="projectCard">
                         <h3 className="activityHeading">
                             Zodoku
                         </h3>
@@ -197,8 +252,8 @@ function HomePage() {
                         <button type="button" className="projectButton" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open('https://sudoku-solver-r7bw.onrender.com/', '_blank'); }}>
                             Use Zodoku here!
                         </button>
-                    </Link>
-                    <Link to="/projects" className="projectCard">
+                    </Link> */}
+                    {/* <Link to="/projects" className="projectCard">
                         <h3 className="activityHeading">
                             Flappy Bird+
                         </h3>
@@ -220,7 +275,7 @@ function HomePage() {
                         <button type="button" className="projectButton" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open('https://play.unity.com/en/games/c572a23f-aec7-48ba-aaf3-4ee5ef875f73/flappy-bird-web-v32', '_blank'); }}>
                             Play Flappy Bird+ here!
                         </button>
-                    </Link>
+                    </Link> */}
 
                     {/* <Link to="/projects" className="projectCard">
                         <h3 className="activityHeading">

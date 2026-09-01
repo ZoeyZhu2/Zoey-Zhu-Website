@@ -64,7 +64,8 @@
 }
 
 /* Project Sections */
-.Zodoku, .FlappyBird,
+.PokerCalc,
+.LionSwipe, .Zodoku, .FlappyBird,
 .PanicAtThePigPen,
 .VideoPoker, .TreeGame,
 .LocomotivesWebsite {
@@ -79,7 +80,8 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
-.Zodoku:hover, .FlappyBird:hover,
+.PokerCalc:hover, 
+.LionSwipe:hover, .Zodoku:hover, .FlappyBird:hover,
 .PanicAtThePigPen:hover,
 .VideoPoker:hover, .TreeGame:hover,
 LocomotivesWebsite:hover {
@@ -99,7 +101,8 @@ LocomotivesWebsite:hover {
 }
 
 /* Project Images */
-.FlappyBird img,
+.PokerCalc img,
+.LionSwipe img, .FlappyBird img,
 .PanicAtThePigPen img,
 .VideoPoker img, 
 .TreeGame img,
@@ -115,7 +118,8 @@ LocomotivesWebsite:hover {
   object-fit: contain;
 }
 
-.FlappyBird img:hover,
+.PokerCalc img:hover,
+.LionSwipe img:hover, .FlappyBird img:hover,
 .PanicAtThePigPen img:hover,
 .VideoPoker img:hover, 
 .Zodoku img:hover,
@@ -214,6 +218,8 @@ LocomotivesWebsite:hover {
     font-size: 2.5rem;
   }
   
+  .PokerCalc,
+  .LionSwipe,
   .Zodoku,
   .FlappyBird,
   .PanicAtThePigPen,
@@ -230,6 +236,11 @@ LocomotivesWebsite:hover {
   .activityBody {
     text-align: left;
     font-size: 1rem;
+  }
+  
+  .activityBody a {
+  color: inherit;
+  text-decoration: underline;
   }
   
   .imageContainer {

@@ -389,6 +389,10 @@
   margin-bottom: 20px;
 }
 
+.activityBody a {
+  color: inherit;
+  text-decoration: underline;
+}
 /* Carousel Styles */
 .hobbiesCarousel {
   display: flex;

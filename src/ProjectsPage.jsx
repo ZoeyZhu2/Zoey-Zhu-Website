@@ -6,6 +6,7 @@ import PanicAtThePigPenImage from './assets/ProjectsImages/PanicAtThePigPen.png'
 import VideoPokerImage from './assets/ProjectsImages/VideoPoker.png';
 import LocomotivesWebsiteImage from './assets/ProjectsImages/CulocomotivesWebsite2.png';
 import ZodokuImage from './assets/ProjectsImages/ZodokuImage.png';
+import LionSwipeImage from './assets/ProjectsImages/LionSwipeImage.png';
 import { useEffect } from 'react';
 
 
@@ -28,6 +29,65 @@ function ProjectsPage(){
                     </button>
                 </div>
             </section>
+            <section className = "PokerCalc">
+                {/* <div className="imageContainer">
+                    <img src={LionSwipeImage} alt="LionSwipe Image" />
+                </div> */}
+                <h3 className="activityHeading">
+                    Poker Calculator
+                </h3>
+                <p className="activitySubheading">
+                    Python, Git
+                </p>
+                <p className="activityBody">
+                    I created a poker calculator that estimates player equity and ev
+                    using monte-carlo simulations in different scenarios
+                    including number of players (2-9), active hands, betting rounds (preflop through river), and table positions.
+                    This can be used during live games by inputting game information as action progresses.
+                    I am currently designing another mode where users can play against
+                    bot opponents with configurable parameters such as assertiveness, looseness, and variability.
+                     My next steps are to transition from a command-line interface to an interactive web interface.
+                </p>
+                <div className="Poker Buttons">
+                    <button type="button">
+                        <a href="https://github.com/ZoeyZhu2/poker-calculator">
+                        Poker Calculator on Github
+                        </a>
+                    </button>
+                </div> 
+            </section>
+            <section className = "LionSwipe">
+                <div className="imageContainer">
+                    <img src={LionSwipeImage} alt="LionSwipe Image" />
+                </div>
+                <h3 className="activityHeading">
+                    LionSwipe
+                </h3>
+                <p className="activitySubheading">
+                    JavaScript, HTML, CSS, Git
+                </p>
+                <p className="activityBody">
+                    LionSwipe is an all-in-one platform for meal swipe tracking and budgeting. 
+                    It displays live on-campus dining hall menus and students can record 
+                    meals eaten at a dining hall by clicking on it. Students can also log outside meals.
+                    With this data, LionSwipe generates a comprehensive dashboard that displays past, present, and target weekly meal swipe usage and spending amounts. The charts provide clarity on a student’s dining habits and how they should allocate their swipes and spending money going forward—with the goal of minimizing waste. 
+                    We have currently released a beta version to the public. In the future, 
+                    we will release more functionality, such as a chatbot search feature that
+                    provides places to eat off-campus that are customized to user preferences, 
+                    including diet, distance, and budget, and a swipe market that connects students 
+                    who want to buy and sell swipes, reducing the financial impact of wasted swipes.
+                    In the process of developing LionSwipe, I personally conducted 30 customer
+                    discovery interviews. I created this in collaboration with{' '}
+                <a href="mailto:evelyn.ding@columbia.edu">Evelyn Ding</a>.
+                </p>
+                <div className="LionSwipeButtons">
+                    <button type="button">
+                        <a href="https://www.lionswipe.com/">
+                        Visit LionSwipe here!
+                        </a>
+                    </button>
+                </div> 
+            </section>
 
             <section className = "Zodoku">
                 <div className="imageContainer">
@@ -47,15 +107,15 @@ function ProjectsPage(){
                                 If you get stuck, click for hints! The first hint will show which cell to look at,
                                  the second hint will suggest a strategy, and the third hint will solve that cell.
                 </p>
-                <div className="Tree Game Buttons">
+                <div className="ZodokuButtons">
                     <button type="button">
                         <a href="https://sudoku-solver-r7bw.onrender.com/">
                         Use Zodoku here!
                         </a>
                     </button>
                     <button type="button">
-                        <a href="https://github.com/ZoeyZhu2/Binary-Tree-Traversal-Game">
-                        Binary Tree Traversal Game on Github
+                        <a href="https://github.com/ZoeyZhu2/Sudoku-Solver">
+                        Zodoku on Github
                         </a>
                     </button>
                 </div> 
