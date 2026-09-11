@@ -121,12 +121,11 @@
 
 /* Endeavors Section */
 .endeavors {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 60px;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   max-width: 1200px;
-  margin: 0 auto 0;
+  margin: 0 auto 30px;
   padding: 40px;
   background: rgba(30, 30, 46, 0.6);
   backdrop-filter: blur(10px);
@@ -153,6 +152,17 @@
 
 .endeavorsImages img:hover {
   transform: scale(1.05);
+}
+
+.endeavorBlock {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.endeavorBlock:has(.endeavorsImages) {
+  grid-template-columns: 1fr 1fr;
 }
 
 /* Projects Section */
@@ -475,16 +485,17 @@
 /* Responsive Design */
 @media (max-width: 1024px) {
   .endeavors,
+  .endeavorBlock,
   .hobbies {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  
+
   .endeavorsText,
   .hobbiestext {
     padding-right: 0;
   }
-  
+
   .projectsGrid {
     grid-template-columns: 1fr;
   }

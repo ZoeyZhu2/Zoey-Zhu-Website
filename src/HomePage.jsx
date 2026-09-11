@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import './HomePageV2.css'
 import CULTsubdivLeads from './assets/EndeavorsImages/CULTsubdivLeads.jpg'
+import UMSeboard from './assets/EndeavorsImages/UMS.jpeg'
+import CURReboard from './assets/EndeavorsImages/CURR.jpg'
 import FlappyBirdImage from './assets/ProjectsImages/FlappyBird.png'
 import PanicAtThePigPenImage from './assets/ProjectsImages/PanicAtThePigPen.png'
 import VideoPokerImage from './assets/ProjectsImages/VideoPoker.png'
@@ -80,29 +82,87 @@ function HomePage() {
                     </a>
                 </div>
             </section>
+            
+            <section className="endeavors">
+                <h2 className="sectionHeading"> 
+                    Current Endeavors
+                </h2>
+
+                <div className="endeavorBlock">
+                    <div className="endeavorsText">
+                        <h3 className="activityHeading">
+                            Research Assistant
+                        </h3>
+                        <p className="activitySubheading">
+                            Columbia Astronomy Department
+                        </p>
+                        <p className="activityBody">
+                            I am working with Professor Frits Paerels on identifying x-ray counterparts to gravitational wave events.
+                            I use Python to process hundreds of gravitational wave transient event FITS files, compute x-ray scattering and absorption optical depths, and determine
+                            candidate search locations. I am gaining experience working with NumPy, Matplotlib, healpy, and astropy libraries.
+                        </p>
+                    </div>
+                </div>
+
+                <div className="endeavorBlock">
+                    <div className="endeavorsText">
+                        <h3 className="activityHeading">
+                            Teaching Assistant
+                        </h3>
+                        <p className="activitySubheading">
+                            Columbia Statistics Department
+                        </p>
+                        <p className="activityBody">
+                            I am a teaching assistant for STAT1201UN Calc-based Intro 
+                            to Statistics taught by Professor Cynthia Rush. I lead weekly
+                            recitation sections.
+                        </p>
+                    </div>
+                </div>
+
+                <div className="endeavorBlock">
+                    <div className="endeavorsText">
+                        <h3 className="activityHeading">
+                            Treasurer
+                        </h3>
+                        <p className="activitySubheading">
+                            Columbia University Road Runners
+                        </p>
+                        <p className="activityBody">
+                            I am responsible for financial tracking, completing budget requests, and coordinating race registration for the club. I will also be assisting in organizing club events and lead weekly runs. 
+                        </p>
+                    </div>
+                    <div className="endeavorsImages">
+                        <img src={CURReboard} alt="Columbia Road Runners Treasurer" />
+                    </div>
+                </div>
+
+                <div className="endeavorBlock">
+                    <div className="endeavorsText">
+                        <h3 className="activityHeading">
+                            Treasurer
+                        </h3>
+                        <p className="activitySubheading">
+                            Columbia Undergraduate Math Society
+                        </p>
+                        <p className="activityBody">
+                            I am responsible for budgeting, food catering, and other similar tasks for our weekly math talks. 
+                        </p>
+                    </div>
+                    <div className="endeavorsImages">
+                        <img src={UMSeboard} alt="Columbia Undergraduate Math Society Treasurer" />
+                    </div>
+                </div>
+            </section>
+
+
             {/* the following section should be on one line horizontally */}
             <section className = "endeavors">
              {/* the following section should be on the left side */}
                 <div className="endeavorsText">
                     <h2 className="sectionHeading"> 
-                        Current Endeavors
+                        Past Endeavors
                     </h2>
-                    <h3 className="activityHeading">
-                        Research Assistant
-                    </h3>
-                    <p className="activitySubheading">
-                        Columbia Astronomy Department
-                    </p>
-                    <p className="activityBody">
-                        I am working with Professor Frits Paerels on identifying x-ray counterparts to gravitational wave events.
-                        I use Python to process hundreds of gravitational wave transient event FITS files, compute x-ray scattering and absorption optical depths, and determine
-                         candidate search locations. I am gaining experience working with NumPy, Matplotlib, healpy, and astropy libraries.
-                    </p>
-                </div>
-            </section>
-            <section className = "endeavors">
-             {/* the following section should be on the left side */}
-                <div className="endeavorsText">
                     <h3 className="activityHeading">
                         Treasurer
                     </h3>
@@ -121,43 +181,7 @@ function HomePage() {
                     <img src={CULTsubdivLeads} alt="Locomotives Team Subdivision Leads" />
                 </div>
             </section>
-
-            <section className = "endeavors">
-             {/* the following section should be on the left side */}
-                <div className="endeavorsText">
-                    <h2 className="sectionHeading"> 
-                        Upcoming Endeavors
-                    </h2>
-                    <h3 className="activityHeading">
-                        Teaching Assistant
-                    </h3>
-                    <p className="activitySubheading">
-                        Columbia Statistics Department
-                    </p>
-                    <p className="activityBody">
-                        I will be a teaching assistant for STAT1201UN Calc-based Intro 
-                        to Statistics taught by Professor Cynthia Rush. 
-                    </p>
-                    <h3 className="activityHeading">
-                        Treasurer
-                    </h3>
-                    <p className="activitySubheading">
-                        Columbia University Road Runners
-                    </p>
-                    <p className="activityBody">
-                        I will be responsible forfinancial tracking, completing budget requests, and coordinating race registration for the club. I will also be assisting in organizing club events and lead weekly runs. 
-                    </p>
-                    <h3 className="activityHeading">
-                        Treasurer
-                    </h3>
-                    <p className="activitySubheading">
-                        Columbia Undergraduate Math Society
-                    </p>
-                    <p className="activityBody">
-                        I will be responsible for budgeting, food catering, and other similar tasks for our weekly math talks. 
-                    </p>
-                </div>                
-            </section>
+            
 
             <section className="projects">
                 <h2 className="sectionHeading"> 
@@ -209,109 +233,6 @@ function HomePage() {
                             Use LionSwipe here!
                         </button>
                     </Link>
-                    {/* <Link to="/projects" className="projectCard">
-                        <h3 className="activityHeading">
-                            Binary Tree Traversal Game
-                        </h3>
-                        <p className="activitySubheading">
-                            Java, Javafx, Git
-                        </p> */}
-                        {/* <p className="activityBody">
-                            The Binary Tree Traversal Game is the second game I developed with Java. 
-                            I built this game as a way for students to practice tree traversals. The
-                            first game mode provides users with a randomly generated binary search tree
-                            and has the user click the nodes in order of the traversal mode they selected 
-                            (preorder, inorder, or postorder). The nodes highlight green or red to give 
-                            real-time feedback. In the second game mode, users are given two traversals 
-                            of random binary trees. They can select either preorder + inorder or 
-                            postorder + inorder, and they are tasked with reconstructing a tree using 
-                            a drag-and-drop canvas. Users can check their accuracy while in progress and
-                            clear the canvas if necessary. My next steps are to improve the UI, and 
-                            eventually I hope to expand this platform to encompass other games for 
-                            practicing data structures knowledge!
-                        </p>
-                        <button type="button" className="projectButton" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open('https://binary-tree-traversal-game.onrender.com', '_blank'); }}>
-                            Play the Binary Tree Traversal Game here!
-                        </button>
-                    </Link> */}
-                    {/* <Link to="/projects" className="projectCard">
-                        <h3 className="activityHeading">
-                            Zodoku
-                        </h3>
-                        <p className="activitySubheading">
-                            Python, Flask, Javascript, HTML, CSS, Git
-                        </p>
-                        <p className="activityBody">
-                            I created a Sudoku solver and puzzle generator to help users learn Sudoku solving strategies and practice using them.
-                             Input any puzzle into the solver function and it will tell you if it is solvable and solve it if it is.
-                              Walk through step by step and see the cells be solved one by one with the current strategy being used.
-                               Practice what you learn with the puzzle generator at 4 difficulty levels.
-                                If you get stuck, click for hints! The first hint will show which cell to look at,
-                                 the second hint will suggest a strategy, and the third hint will solve that cell.
-                        </p>
-                        <button type="button" className="projectButton" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open('https://sudoku-solver-r7bw.onrender.com/', '_blank'); }}>
-                            Use Zodoku here!
-                        </button>
-                    </Link> */}
-                    {/* <Link to="/projects" className="projectCard">
-                        <h3 className="activityHeading">
-                            Flappy Bird+
-                        </h3>
-                        <p className="activitySubheading">
-                            Unity, C#, Git
-                        </p>
-                        <p className="activityBody">
-                            Flappy Bird is the first game I ever developed with Unity. After designing
-                            original sprites and obstacles, I worked on randomized obstacle generation
-                            and game mechanics. Then, I added a second game-mode with daily-seeded obstacle
-                            configurations. I used Unity's new Input Actions to make my game cross-platform 
-                            and add key-binds for pausing and restarting the game. I built a pause menu
-                            with options to resume, return home, open settings, and restart, and a settings music 
-                            to adjust volume for background music and my custom sound effects. I have high-score 
-                            tracking, and I recently implemented a Firebase backend for player authentication and persistent account data storage. 
-                            I have added a leaderboard with score rankings for the normal and daily game modes. Eventually, I will add even more features like character and background 
-                            selection!
-                        </p>
-                        <button type="button" className="projectButton" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open('https://play.unity.com/en/games/c572a23f-aec7-48ba-aaf3-4ee5ef875f73/flappy-bird-web-v32', '_blank'); }}>
-                            Play Flappy Bird+ here!
-                        </button>
-                    </Link> */}
-
-                    {/* <Link to="/projects" className="projectCard">
-                        <h3 className="activityHeading">
-                            Panic at the Pig Pen
-                        </h3>
-                        <p className="activitySubheading">
-                            Unity, C#, Git
-                        </p>
-                        <p className="activityBody">
-                            Panic at the Pig Pen is the second game I developed with Unity and my first original game. The goal 
-                            of the game is to catch green pigs with the net while avoiding the pink pigs. 
-                            Points are earned from catching green pigs, lost by missing green pigs, and the game 
-                            ends when a pink pig is caught. After designing custom sprites and obstacles, I worked on randomized obstacle generation
-                            and game mechanics. Like in Flappy Bird, I used Unity's new Input Actions to make my game cross-platform 
-                            and add key-binds, and I built a pause menu with options to resume, return home, open settings, and restart, and a settings music 
-                            to adjust volume. My next steps are to integrate a backend database to store player data 
-                            across sessions and deploy!
-                        </p>
-                    </Link> */}
-
-                    {/* <Link to="/projects" className="projectCard">
-                        <h3 className="activityHeading">
-                            Video Poker
-                        </h3>
-                        <p className="activitySubheading">
-                            Java, Git
-                        </p>
-                        <p className="activityBody">
-                            This is an extension of a class project I did! I developed an interactive 
-                            Video Poker game in Java and a graphical user interface using Java Swing. 
-                            I modeled a standard 52-card deck and implemented shuffle, draw, and discard mechanics. 
-                            Hand-ranking algorithms evaluate hands and compute payouts. I created 
-                            custom card faces to enhance user experience! My next steps are to continue 
-                            improving the GUI and officially publish the game!
-                        </p>
-                    </Link> */}
                 </div>
                 <div className="viewAllProjectsButtonWrapper">
                     <Link to="/projects" className="viewAllProjectsButton">
