@@ -5,6 +5,7 @@ import ProjectsPage from './ProjectsPage'
 import NavigationBar from './NavBar'
 import ContactPage from './ContactPage'
 import BookshelfPage from './BookshelfPage'
+import PlaylistPage from './PlaylistPage'
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
                         <Route path="/projects" element={<ProjectsPage />} />
                         <Route path="/fun" element={<FunPage />} /> 
                         <Route path="/bookshelf" element={<BookshelfPage />} />
+                        <Route path="/playlist" element={<PlaylistPage />} />
                         <Route path="/contact" element={<ContactPage />} />       
                     </Routes>
                 </div>
