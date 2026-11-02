@@ -32,11 +32,9 @@
   animation: logo-spin 10s linear infinite;
 }
 .smileyFace:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
   animation: logo-spin 1s linear infinite;
 }
 .upsideDownSmileyFace:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
   animation: logo-spin 1s linear infinite;
 }
 
@@ -55,23 +53,22 @@ h1 {
   z-index: 1100; Higher than the NavBar's z-index */
   font-size: clamp(0.8em, 1.5vw, 1.1em);
   padding: clamp(0.6em, 1.5vw, 1em);
-  background: linear-gradient(135deg, #646cff 0%, #9c92ff 100%);
+  background: var(--primary);
   color: white;
   position: absolute;
   transition: top 0.3s ease, left 0.4s ease, transform 0.2s ease, box-shadow 0.3s ease;
   z-index: 1100;
   border: none;
-  border-radius: clamp(0.4em, 1vw, 0.8em);
+  border-radius: var(--radius);
   font-weight: 600;
   letter-spacing: 0.05em;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(100, 108, 255, 0.4);
+  
   text-transform: uppercase;
 
 }
 
 .rickRollButton:hover {
-  box-shadow: 0 0 5em #61dafbaa;
 }
 
 
@@ -112,14 +109,13 @@ h1 {
   /*makes mouse become a hand*/
   background-color: bisque;
   border: clamp(0.15em, 0.5vw, 0.3em) solid #6d4c00;
-  border-radius: clamp(0.6em, 1.5vw, 1.2em);
+  border-radius: var(--radius);
   /* rounds borders */
   transition: all 0.3s ease;
 }
 
 .cookieButton:hover {
-  filter: drop-shadow(0 0 2em #ffb400aa);
-  transform: scale(1.05);
+  transform: scale(1.02);
   border-color: #6d4c00 !important;
 }
 
@@ -155,7 +151,7 @@ h1 {
 
 
 .instructions {
-  color: #888;
+  color: var(--muted);
   font-size: clamp(1.2em, 4vw, 2em);
   margin: clamp(0.5em, 1vw, 1em) 0;
   font-weight: 500;
