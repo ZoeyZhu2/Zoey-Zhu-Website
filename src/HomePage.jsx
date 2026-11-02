@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-import './HomePageV2.css'
+import './HomePage.css'
 import CULTsubdivLeads from './assets/EndeavorsImages/CULTsubdivLeads.jpg'
 import UMSeboard from './assets/EndeavorsImages/UMS.jpeg'
 import CURReboard from './assets/EndeavorsImages/CURR.jpg'
