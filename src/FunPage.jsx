@@ -12,6 +12,8 @@ import cookie6 from './assets/Cookie/biteSix.png';
 import cookie7 from './assets/Cookie/biteSeven.png';
 import tombstone from './assets/Cookie/Tombstone.png';
 
+const cookieImages = [cookie, cookie1, cookie2, cookie3, cookie4, cookie5, cookie6, cookie7];
+
 
 
 function FunPage() {
@@ -23,7 +25,6 @@ function FunPage() {
   const [bgClickCount, setBgClickCount] = useState(0);
   const [isDisco, setIsDisco] = useState(false);
   const [showTombstone, setShowTombstone] = useState(false);
-  const cookieImages = [cookie, cookie1, cookie2, cookie3, cookie4, cookie5, cookie6, cookie7];
   
   const getRandomColor = () => {
     const char = '0123456789ABCDEF';
@@ -48,6 +49,11 @@ function FunPage() {
       }
     }
   } 
+
+  // Preload the cookie images so a bite never flashes blank while its file loads.
+  useEffect(() => {
+    [...cookieImages, tombstone].forEach((src) => { new Image().src = src; });
+  }, []);
 
   //Disco mode animation
   useEffect(() => {
@@ -79,10 +85,23 @@ function FunPage() {
     const buttonHeight = button.offsetHeight;
     const navBarHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-bar-height')) || 80; // Default to 80px
 
-    const newTop = Math.random() * (window.innerHeight - buttonHeight - navBarHeight) + navBarHeight + 0.5 * buttonHeight;
-    const newLeft = Math.random() * (window.innerWidth - buttonWidth) + 0.5 * buttonWidth;
+    const pick = () => ({
+      top: Math.random() * (window.innerHeight - buttonHeight - navBarHeight) + navBarHeight + 0.5 * buttonHeight,
+      left: Math.random() * (window.innerWidth - buttonWidth) + 0.5 * buttonWidth,
+    });
+    const distanceFromCurrent = (p) => Math.hypot(p.top - rickRollPosition.top, p.left - rickRollPosition.left);
 
-    setPosition({ top: newTop, left: newLeft });
+    // The new spot must be at least 300px away, or 35% of the smaller screen dimension on small screens.
+    const minDistance = Math.min(300, 0.35 * Math.min(window.innerWidth, window.innerHeight));
+
+    // Retry until the jump is far enough. If no try gets there (tiny window), use the farthest one seen.
+    let best = pick();
+    for (let tries = 0; tries < 50 && distanceFromCurrent(best) < minDistance; tries++) {
+      const candidate = pick();
+      if (distanceFromCurrent(candidate) > distanceFromCurrent(best)) best = candidate;
+    }
+
+    setPosition(best);
   };
 
   const cookieClick = () => {
@@ -107,7 +126,7 @@ function FunPage() {
   }, [count]);
 
   return (
-    <div onClick={bgClick} style={{backgroundColor: bgColor,  minHeight: '90vh', transition: 'background-color 0.3s ease', top: '10vh'}}>
+    <div onClick={bgClick} style={{backgroundColor: bgColor,  minHeight: '90vh', transition: 'background-color 0.3s ease', top: '10vh', userSelect: 'none', WebkitUserSelect: 'none'}}>
       <div className="smiles">
         <a href="https://theuselessweb.com/" target="_blank">
           <img src={smileyFace} className="smileyFace" alt="Smiley face" />
@@ -122,12 +141,11 @@ function FunPage() {
       </p>
       <div className="cookie">
         <button onClick={cookieClick} className = "cookieButton">
-          {count === 0 && (<img src={cookie} alt = "Cookie!" className="cookieImage"/>)}
-          {count > 0 && count < 8 && (
-            <img 
-              src={cookieImages[count]} 
-              alt={`Cookie ${count}`} 
-              className="cookieImage" 
+          {count < 8 && (
+            <img
+              src={cookieImages[count]}
+              alt={count === 0 ? 'Cookie!' : `Cookie ${count}`}
+              className="cookieImage"
             />
           )}
           {count === 8 && !showTombstone && (<span className = "cookieText"> HEY! You ate it all!</span>)}
@@ -143,7 +161,7 @@ function FunPage() {
               setTimeout(() => {
               randomRotate();
               randomPosition();
-            }, 200);
+            }, 160);
               }} 
               style={{ 
                 transform: `rotate(${rickRollRotation}deg) scale(1.5)`, 

@@ -1,10 +1,10 @@
 /* Dark Theme Contact Page */
 .contactPage {
-  background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 100%);
+  background: var(--bg);
   min-height: 100vh;
-  color: #e0e0e0;
+  color: var(--text);
   padding: 60px 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--font);
 }
 
 .contactContainer {
@@ -16,28 +16,24 @@
 .contactHeader {
   text-align: center;
   margin-bottom: 80px;
-  padding: 40px 20px;
+  padding: 0 20px 40px;
 }
 
 .contactHeader h1 {
-  font-size: 4rem;
+  margin-top: 0;
+  font-size: 3.5rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--primary);
   margin-bottom: 20px;
-  letter-spacing: -2px;
-  animation: fadeInUp 0.8s ease-out;
+  letter-spacing: -0.5px;
 }
 
 .contactSubtitle {
   font-size: 1.2rem;
-  color: #c0c0c0;
+  color: var(--text);
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.8;
-  animation: fadeInUp 1s ease-out;
 }
 
 /* Contact Methods */
@@ -49,13 +45,12 @@
 }
 
 .contactCard {
-  background: rgba(30, 30, 46, 0.6);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
+  background: var(--surface);
+  border-radius: var(--radius);
   padding: 40px;
-  border: 1px solid rgba(102, 126, 234, 0.2);
+  border: 1px solid var(--sky);
   transition: all 0.3s ease;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -63,16 +58,15 @@
 }
 
 .contactCard:hover {
-  transform: translateY(-8px);
-  border-color: rgba(102, 126, 234, 0.4);
-  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.3);
+  transform: translateY(-2px);
+  border-color: var(--primary);
 }
 
 .contactIcon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 50%;
+  background: var(--primary);
+  border-radius: var(--radius);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,30 +74,30 @@
   font-weight: bold;
   color: white;
   margin-bottom: 20px;
-  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+  
 }
 
 .contactCard h3 {
   font-size: 1.8rem;
-  color: #ffffff;
+  color: var(--primary);
   margin-bottom: 10px;
 }
 
 .contactDescription {
   font-size: 1rem;
-  color: #a0a0a0;
+  color: var(--muted);
   margin-bottom: 20px;
   line-height: 1.6;
 }
 
 .contactLink {
-  color: #667eea;
+  color: var(--primary);
   text-decoration: none;
   font-weight: 600;
   font-size: 1.05rem;
   padding: 12px 24px;
-  border: 2px solid #667eea;
-  border-radius: 50px;
+  border: 2px solid var(--primary);
+  border-radius: var(--radius);
   transition: all 0.3s ease;
   display: inline-block;
   position: relative;
@@ -111,26 +105,10 @@
   z-index: 1;
 }
 
-.contactLink::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  transition: left 0.3s ease;
-  z-index: -1;
-}
-
-.contactLink:hover::before {
-  left: 0;
-}
-
 .contactLink:hover {
   color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+  transform: translateY(-1px);
+  background: var(--primary);
 }
 
 /* Quick Links Section */
@@ -142,7 +120,7 @@
 .quickLinks h2 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--primary);
   margin-bottom: 40px;
   text-align: center;
   position: relative;
@@ -157,7 +135,7 @@
   transform: translateX(-50%);
   width: 60%;
   height: 3px;
-  background: linear-gradient(90deg, #667eea 0%, transparent 100%);
+  background: var(--sand);
 }
 
 
@@ -170,13 +148,12 @@
 }
 
 .quickLinkCard {
-  background: rgba(30, 30, 46, 0.6);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 40px;
-  border: 1px solid rgba(102, 126, 234, 0.2);
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 22px 40px;
+  border: 1px solid var(--sky);
   transition: all 0.3s ease;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow);
   text-align: center;
   text-decoration: none;
   color: inherit;
@@ -188,9 +165,8 @@
 
 
 .quickLinkCard:hover {
-  transform: translateY(-8px);
-  border-color: rgba(102, 126, 234, 0.4);
-  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.3);
+  transform: translateY(-2px);
+  border-color: var(--primary);
 }
 
 .quickLinkIcon {
@@ -201,13 +177,14 @@
 
 .quickLinkCard h4 {
   font-size: 1.5rem;
-  color: #ffffff;
-  margin-bottom: 10px;
+  color: var(--primary);
+  margin-top: 0;
+  margin-bottom: 6px;
 }
 
 .quickLinkCard p {
   font-size: 1rem;
-  color: #a0a0a0;
+  color: var(--muted);
   margin: 0;
 }
 
@@ -219,7 +196,7 @@
 .additionalInfo h2 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--primary);
   margin-bottom: 40px;
   text-align: center;
   position: relative;
@@ -232,10 +209,11 @@
   content: '';
   position: absolute;
   bottom: -10px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 60%;
   height: 3px;
-  background: linear-gradient(90deg, #667eea 0%, transparent 100%);
+  background: var(--sand);
 }
 
 .interestsGrid {
@@ -245,19 +223,17 @@
 }
 
 .interestItem {
-  background: rgba(30, 30, 46, 0.6);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
+  background: var(--surface);
+  border-radius: var(--radius);
   padding: 35px;
-  border: 1px solid rgba(102, 126, 234, 0.2);
+  border: 1px solid var(--sky);
   transition: all 0.3s ease;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow);
 }
 
 .interestItem:hover {
-  transform: translateY(-5px);
-  border-color: rgba(102, 126, 234, 0.4);
-  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.3);
+  transform: translateY(-2px);
+  border-color: var(--primary);
 }
 
 .interestIcon {
@@ -268,13 +244,13 @@
 
 .interestItem h4 {
   font-size: 1.4rem;
-  color: #ffffff;
+  color: var(--primary);
   margin-bottom: 10px;
 }
 
 .interestItem p {
   font-size: 1rem;
-  color: #c0c0c0;
+  color: var(--text);
   line-height: 1.6;
   margin: 0;
 }
@@ -285,11 +261,10 @@
 }
 
 .responseCard {
-  background: rgba(102, 126, 234, 0.15);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
+  background: var(--sand);
+  border-radius: var(--radius);
   padding: 40px;
-  border: 1px solid rgba(102, 126, 234, 0.3);
+  border: 1px solid var(--sky);
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
@@ -297,27 +272,15 @@
 
 .responseCard h3 {
   font-size: 1.8rem;
-  color: #ffffff;
+  color: var(--primary);
   margin-bottom: 15px;
 }
 
 .responseCard p {
   font-size: 1.05rem;
-  color: #c0c0c0;
+  color: var(--text);
   line-height: 1.7;
   margin: 0;
-}
-
-/* Animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* Responsive Design */
@@ -355,7 +318,7 @@
 
   .contactHeader h1 {
     font-size: 2.2rem;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
   }
 
   .contactSubtitle {
