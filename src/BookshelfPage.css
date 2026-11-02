@@ -1,42 +1,44 @@
 .bookshelfPage {
-  background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 100%);
+  background: var(--bg);
   min-height: 100vh;
-  color: #e0e0e0;
+  color: var(--text);
   padding: 60px 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--font);
 }
 .bookshelfPage > * { max-width: 1000px; margin-left: auto; margin-right: auto; }
 
 .bookshelfHeader { text-align: center; margin-bottom: 60px; }
 .bookshelfHeader h1 {
-  font-size: 3.5rem; font-weight: 700; letter-spacing: -1px; margin-bottom: 10px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  margin-top: 0;
+  font-size: 3.5rem; font-weight: 700; margin-bottom: 10px; color: var(--primary);
 }
-.bookshelfHeader p { color: #a0a0a0; font-size: 1.1rem; }
-.bookshelfHeader a:not(.button) { color: #8b9cf5; }
+.bookshelfHeader p { color: var(--muted); font-size: 1.1rem; }
+.bookshelfHeader a:not(.button) { color: var(--primary); }
 
 .bookshelfPage section { margin-bottom: 70px; }
-.bookshelfPage h2 { font-size: 1.8rem; color: #fff; margin-bottom: 24px; }
-.bookshelfPage .count { font-size: 1rem; color: #888; font-weight: 400; margin-left: 8px; }
+.bookshelfPage h2 { font-size: 1.8rem; color: var(--primary); margin-bottom: 24px; }
+.bookshelfPage .count { font-size: 1rem; color: var(--muted); font-weight: 400; margin-left: 8px; }
 
-.authBar { margin-top: 18px; display: flex; gap: 12px; justify-content: center; align-items: center; color: #a0a0a0; font-size: 0.9rem; }
+.authBar { margin-top: 18px; display: flex; gap: 12px; justify-content: center; align-items: center; color: var(--muted); font-size: 0.9rem; }
 .loginForm { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
 .bookshelfPage input, .bookshelfPage textarea {
-  background: rgba(255,255,255,0.06); border: 1px solid rgba(102,126,234,0.35); border-radius: 8px;
-  color: #fff; padding: 8px 12px; font: inherit;
+  background: var(--surface); border: 1px solid var(--sky); border-radius: var(--radius);
+  color: var(--text); padding: 8px 12px; font: inherit;
 }
 .bookshelfPage textarea { width: 100%; resize: vertical; box-sizing: border-box; }
 .bookshelfPage button, .bookshelfPage a.button {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff; border: 0;
-  border-radius: 8px; padding: 8px 16px; font: inherit; cursor: pointer;
+  background: var(--primary); color: #fff; border: 1px solid var(--primary);
+  border-radius: var(--radius); padding: 8px 16px; font: inherit; cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
 }
+.bookshelfPage button:hover, .bookshelfPage a.button:hover { background: var(--primary-hover); border-color: var(--primary-hover); }
 .bookshelfPage a.button { display: inline-block; text-decoration: none; line-height: normal; }
 .bookshelfPage button:disabled { opacity: 0.6; cursor: default; }
-.bookshelfPage button.ghost, .bookshelfPage a.button.ghost { background: transparent; border: 1px solid rgba(102,126,234,0.5); color: #c0c8ff; }
+.bookshelfPage button.ghost, .bookshelfPage a.button.ghost { background: transparent; border: 1px solid var(--primary); color: var(--primary); }
+.bookshelfPage button.ghost:hover, .bookshelfPage a.button.ghost:hover { background: var(--primary); border-color: var(--primary); color: #fff; }
 .bookshelfPage button.small, .bookshelfPage a.button.small { padding: 4px 12px; font-size: 0.85rem; }
-.error { color: #ff7b7b; font-size: 0.9rem; }
-.empty { text-align: center; color: #888; }
+.error { color: var(--brick); font-size: 0.9rem; }
+.empty { text-align: center; color: var(--muted); }
 
 .readingList, .readList { display: grid; gap: 16px; }
 .readingList { grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); }
@@ -44,30 +46,30 @@
 /* Roughly 10 cards tall; scrolls for the rest. */
 .readList {
   max-height: 1830px; overflow-y: auto; padding-right: 14px;
-  scrollbar-color: #667eea rgba(255,255,255,0.06); scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--sky); scrollbar-width: thin;
 }
 @media (max-width: 600px) { .readList { max-height: 1500px; } }
 
 .bookCard {
   position: relative; display: flex; gap: 18px; padding: 16px;
-  background: rgba(255,255,255,0.04); border: 1px solid rgba(102,126,234,0.2); border-radius: 12px;
+  background: var(--surface); border: 1px solid var(--sky); border-radius: var(--radius);
 }
 .coverLink { flex: 0 0 90px; }
-.coverLink img, .noCover { width: 90px; height: 135px; object-fit: cover; border-radius: 6px; background: #2a2a40; display: block; }
-.bookBody { flex: 1; min-width: 0; }
-.bookBody h3 { margin: 0 0 2px; font-size: 1.1rem; color: #fff; }
-.author { margin: 0 0 6px; color: #9a9ab0; font-size: 0.95rem; }
+.coverLink img, .noCover { width: 90px; height: 135px; object-fit: cover; border-radius: var(--radius); background: var(--sky); display: block; }
+.bookBody { flex: 1; min-width: 0; text-align: left; }
+.bookBody h3 { margin: 0 0 2px; font-size: 1.1rem; color: var(--text); }
+.author { margin: 0 0 6px; color: var(--muted); font-size: 0.95rem; }
 .stars { display: inline-flex; align-items: center; }
 .starsGlyphs { position: relative; display: inline-block; letter-spacing: 2px; line-height: 1; }
-.starsEmpty { color: #3b3b55; }
-.starsFilled { position: absolute; top: 0; left: 0; overflow: hidden; white-space: nowrap; color: #f5c542; }
-.starsValue { margin-left: 8px; color: #9a9ab0; font-size: 0.85rem; letter-spacing: 0; }
-.unrated { color: #666; font-size: 0.85rem; }
-.note p { margin: 10px 0 8px; line-height: 1.6; color: #cfcfe0; white-space: pre-wrap; }
-.note .placeholder { color: #666; font-style: italic; }
+.starsEmpty { color: var(--sky); }
+.starsFilled { position: absolute; top: 0; left: 0; overflow: hidden; white-space: nowrap; color: var(--sand); }
+.starsValue { margin-left: 8px; color: var(--muted); font-size: 0.85rem; letter-spacing: 0; }
+.unrated { color: var(--muted); font-size: 0.85rem; }
+.note p { margin: 10px 0 8px; line-height: 1.6; color: var(--text); white-space: pre-wrap; }
+.note .placeholder { color: var(--muted); font-style: italic; }
 .noteEditor { margin-top: 10px; }
 .noteActions { display: flex; gap: 8px; margin-top: 8px; }
-.updated { text-align: center; color: #666; font-size: 0.85rem; }
+.updated { text-align: center; color: var(--muted); font-size: 0.85rem; }
 
 @media (max-width: 600px) {
   .readingList { grid-template-columns: 1fr; }

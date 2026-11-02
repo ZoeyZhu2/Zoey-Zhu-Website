@@ -1,10 +1,39 @@
 /* styles for entire app. Sets the defaults*/
 
+:root {
+  --bg: #ECFEFF;             /* pale cyan */
+  --surface: #FFFFFF;        /* cards */
+  --text: #0B1F3A;           /* deep navy */
+  --muted: #5B6B7F;          /* secondary text */
+  --primary: #2866CF;        /* links, buttons, headings */
+  --primary-hover: #1B4494;
+  --sky: #96D1F7;            /* soft fills, borders */
+  --sand: #E6C788;           /* highlights, tags, bands */
+  --brick: #B72818;          /* rare accent */
+  --radius: 4px;
+  --font: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  --shadow: 0 1px 4px rgba(11, 31, 58, 0.08);
+}
+
 #root {
   width: 100%;
   max-width: none;
   margin: 0;
   padding: 0;
+}
+
+html {
+  font-size: 112.5%; /* Garamond runs small, so scale up every rem */
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+}
+
+button, input, textarea {
+  font-family: inherit;
 }
 
 html, body {

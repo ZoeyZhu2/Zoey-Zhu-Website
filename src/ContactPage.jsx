@@ -203,19 +203,16 @@ function ContactPage() {
                     <h2>Explore More</h2>
                     <div className="quickLinksGrid">
                         <Link to="/" className="quickLinkCard">
-                            <span className="quickLinkIcon">🏠</span>
                             <h4>Home</h4>
                             <p>Learn more about me</p>
                         </Link>
                         
                         <Link to="/projects" className="quickLinkCard">
-                            <span className="quickLinkIcon">💻</span>
                             <h4>Projects</h4>
                             <p>View my work</p>
                         </Link>
 
                         <Link to="/fun" className="quickLinkCard funCard">
-                            <span className="quickLinkIcon">🎉</span>
                             <h4>Fun</h4>
                             <p>Have fun here!</p>
                         </Link>
