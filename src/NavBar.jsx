@@ -26,6 +26,9 @@ function NavigationBar() {
                             <Link to="/fun" className={isActive('/fun') ? 'active' : ''}> Fun </Link>
                         </li>
                         <li>
+                            <Link to="/bookshelf" className={isActive('/bookshelf') ? 'active' : ''}> Bookshelf </Link>
+                        </li>
+                        <li>
                             <Link to="/contact" className={isActive('/contact') ? 'active' : ''}> Contact </Link>
                         </li>
                     </ol>

@@ -140,7 +140,7 @@
 // export default ContactPage
 
 import { Link } from 'react-router-dom'
-import './ContactPageV2.css'
+import './ContactPage.css'
 
 function ContactPage() {
     return (
