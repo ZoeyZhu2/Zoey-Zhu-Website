@@ -151,6 +151,36 @@ function HomePage() {
                         <img src={UMSeboard} alt="Columbia Undergraduate Math Society Treasurer" />
                     </div>
                 </div>
+
+                <div className="endeavorBlock">
+                    <div className="endeavorsText">
+                        <h3 className="activityHeading">
+                            Internal/External Committee Member
+                        </h3>
+                        <p className="activitySubheading">
+                            Application Development Initiative
+                        </p>
+                        <p className="activityBody">
+                            I organize and facilitate club events for Application Development Initiative (<a href="https://www.adicu.com/" target="_blank" rel="noopener noreferrer">ADI</a>).
+                            I also conduct outreach to companies and organizations for collaborations.
+                        </p>
+                    </div>
+                </div>
+
+                <div className="endeavorBlock">
+                    <div className="endeavorsText">
+                        <h3 className="activityHeading">
+                            Competitive Team Member
+                        </h3>
+                        <p className="activitySubheading">
+                            Columbia University Club Golf
+                        </p>
+                        <p className="activityBody">
+                            I compete in club golf competitions.
+                        </p>
+                    </div>
+                </div>
+                
             </section>
 
 
