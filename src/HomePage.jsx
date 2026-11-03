@@ -62,7 +62,7 @@ function HomePage() {
                 <h3> CS-Math at Columbia</h3>
                 <p> 
                     What's life without the novelty of learning?
-                    Currently captivated by mathematives, statistics, and 
+                    Currently captivated by mathematics, statistics, and 
                     computer science. Also a lover of classics.
                     Semper disco!
                 </p>
@@ -94,12 +94,10 @@ function HomePage() {
                             Research Assistant
                         </h3>
                         <p className="activitySubheading">
-                            Columbia Astronomy Department
+                            Columbia Internet Real-Time Lab
                         </p>
                         <p className="activityBody">
-                            I am working with Professor Frits Paerels on identifying x-ray counterparts to gravitational wave events.
-                            I use Python to process hundreds of gravitational wave transient event FITS files, compute x-ray scattering and absorption optical depths, and determine
-                            candidate search locations. I am gaining experience working with NumPy, Matplotlib, healpy, and astropy libraries.
+                            I am working with Professor Henning Schulzrinne and PhD student Sunny Fang on predicting credit default risk of Internet Service Providers in U.S. federal broadband deployment programs.
                         </p>
                     </div>
                 </div>
@@ -107,14 +105,14 @@ function HomePage() {
                 <div className="endeavorBlock">
                     <div className="endeavorsText">
                         <h3 className="activityHeading">
-                            Teaching Assistant
+                            Recitation Leader
                         </h3>
                         <p className="activitySubheading">
                             Columbia Statistics Department
                         </p>
                         <p className="activityBody">
-                            I am a teaching assistant for STAT1201UN Calc-based Intro 
-                            to Statistics taught by Professor Cynthia Rush. I lead weekly
+                            I am a recitation leader for STAT1201UN Calc-based Intro 
+                            to Statistics taught by Professor Cynthia Rush and Joyce Robbins. I lead weekly
                             recitation sections.
                         </p>
                     </div>
@@ -163,6 +161,23 @@ function HomePage() {
                     <h2 className="sectionHeading"> 
                         Past Endeavors
                     </h2>
+                    <div className="endeavorBlock">
+                        <div className="endeavorsText">
+                            <h3 className="activityHeading">
+                                Research Assistant
+                            </h3>
+                            <p className="activitySubheading">
+                                Columbia Astronomy Department
+                            </p>
+                            <p className="activityBody">
+                                I worked with Professor Frits Paerels on identifying x-ray counterparts to gravitational wave events.
+                                I used Python to process hundreds of gravitational wave transient event FITS files, compute x-ray scattering and absorption optical depths, and determine
+                                candidate search locations. I also developed a search algorithm to search for predicted x-ray ring patterns. 
+                                I gained experience working with NumPy, Matplotlib, healpy, and astropy libraries. I presented my research at Columbia's 
+                                undergraduate research symposium on October 23rd, 2026.
+                            </p>
+                        </div>
+                    </div>
                     <h3 className="activityHeading">
                         Treasurer
                     </h3>
