@@ -13,7 +13,7 @@ function App() {
         <header>
             
         </header>
-            <BrowserRouter basename="/Zoey-Zhu-Website">
+            <BrowserRouter basename="/">
                  <NavigationBar></NavigationBar>
                 <div>
                     <Routes>
