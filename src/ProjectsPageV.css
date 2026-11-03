@@ -81,7 +81,6 @@
 .PanicAtThePigPen:hover,
 .VideoPoker:hover, .TreeGame:hover,
 LocomotivesWebsite:hover {
-  transform: translateY(-2px);
   border-color: var(--primary);
 }
 
@@ -120,7 +119,6 @@ LocomotivesWebsite:hover {
 .Zodoku img:hover,
 .TreeGame img:hover,
 .LocomotivesWebsite img:hover {
-  transform: scale(1.02);
 }
 
 /* Typography */
