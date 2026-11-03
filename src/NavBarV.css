@@ -20,16 +20,20 @@ nav {
 
 #name {
   font-family: var(--font);
-  font-size: 1.8rem;
+  font-size: clamp(1.3rem, 1rem + 1vw, 1.8rem);
   font-weight: 700;
   color: var(--primary);
   margin: 0;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 #navButtons {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(0.5rem, 2vw, 2rem);
   margin: 0;
   padding: 0;
   align-items: center;
@@ -42,10 +46,10 @@ nav {
 #navButtons a {
   color: var(--text);
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 0.8rem + 0.4vw, 1.1rem);
   font-weight: 500;
   font-family: var(--font);
-  padding: 0.5rem 1.2rem;
+  padding: clamp(0.4rem, 0.5vw, 0.5rem) clamp(0.8rem, 1.5vw, 1.2rem);
   border-radius: var(--radius);
   transition: color 0.2s ease, background 0.2s ease;
   position: relative;
@@ -83,44 +87,17 @@ nav {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+/* Too narrow for one line: stack and center the name and links */
+@media (max-width: 1200px) {
   nav {
     padding: 1.2rem 2rem;
     flex-direction: column;
     gap: 1.5rem;
-  }
-
-  #name {
-    font-size: 1.5rem;
-  }
-
-  #navButtons {
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  #navButtons a {
-    font-size: 1rem;
-    padding: 0.4rem 1rem;
   }
 }
 
 @media (max-width: 480px) {
   nav {
     padding: 1rem 1rem;
-  }
-
-  #name {
-    font-size: 1.3rem;
-  }
-
-  #navButtons {
-    gap: 0.5rem;
-  }
-
-  #navButtons a {
-    font-size: 0.95rem;
-    padding: 0.4rem 0.8rem;
   }
 }

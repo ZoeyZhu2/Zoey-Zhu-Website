@@ -12,7 +12,7 @@ function NavigationBar() {
         <>
             <nav>
                 <h1 id = "name">
-                    Zoey Zhu
+                    <Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Zoey Zhu</Link>
                 </h1>
                 <div>
                     <ol id = "navButtons">
@@ -30,6 +30,9 @@ function NavigationBar() {
                         </li>
                         <li>
                             <Link to="/playlist" className={isActive('/playlist') ? 'active' : ''}> Playlist </Link>
+                        </li>
+                        <li>
+                            <a href="/Zoey_Zhu_Resume.pdf" target="_blank" rel="noopener noreferrer"> Resume </a>
                         </li>
                         <li>
                             <Link to="/contact" className={isActive('/contact') ? 'active' : ''}> Contact </Link>
